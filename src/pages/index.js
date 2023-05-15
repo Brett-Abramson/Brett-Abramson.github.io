@@ -1,15 +1,19 @@
 import Header from "@/components/Header";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import Hero from "@/components/Hero";
+import SocialLinks from "@/components/SocialLinks";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen grid">
       <Header />
-      <main
-        className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-      ></main>
+      <main className="grid grid-cols-4">
+        <div className="col-start-2 col-span-2">
+          <Hero />
+        </div>
+        <div className="col-start-4">
+          <SocialLinks  />
+        </div>
+      </main>
     </div>
   );
 }

@@ -11,19 +11,19 @@ const Header = () => {
         <div className="hidden md:flex">
           <Link
             href="#"
-            className="text-gray-400 mx-4 lg:text-4xl lg:mx-8 hover:text-white hover:underline"
+            className="text-gray-400 mx-4 lg:text-3xl lg:mx-6 hover:text-white hover:underline"
           >
             Projects
           </Link>
           <Link
             href="#"
-            className="text-gray-400 mx-4 lg:text-4xl lg:mx-8 hover:text-white hover:underline"
+            className="text-gray-400 mx-4 lg:text-3xl lg:mx-6 hover:text-white hover:underline"
           >
             Tools
           </Link>
           <Link
             href="#"
-            className="text-gray-400 mx-4 lg:text-4xl lg:mx-8 hover:text-white hover:underline"
+            className="text-gray-400 mx-4 lg:text-3xl lg:mx-6 hover:text-white hover:underline"
           >
             Contact
           </Link>

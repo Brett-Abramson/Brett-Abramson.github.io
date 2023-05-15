@@ -29,14 +29,14 @@ const DropDown = () => {
           </svg>
         </Menu.Button>
         <Transition
-          enter="transition duration-250 ease-out"
+          enter="transition duration-250 ease-in"
           enterFrom="transform scale-50 opacity-0"
           enterTo="transform scale-100 opacity-100"
           leave="transition duration-200 ease-out"
           leaveFrom="transform scale-100 opacity-100"
           leaveTo="transform scale-95 opacity-0"
         >
-          <Menu.Items>
+          <Menu.Items className="flex flex-col overflow-auto ">
             {links.map((link) => {
               return (
                 <Menu.Item key={link.href} as={Fragment}>
