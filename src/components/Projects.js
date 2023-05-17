@@ -32,18 +32,24 @@ const Projects = () => {
       <div className="flex flex-col">
         <div className="flex flex-col items-center py-5">
           <h3 className="pt-2 font-serif text-2xl font-extralight">Projects</h3>
-          <h2 className="py-6 text-4xl">Latest Works</h2>
+          <h2 className="py-4 md:py-6 text-4xl">Latest Works</h2>
         </div>
         <div className="">
           {projects.map((project) => {
             return (
-              <div className="flex h-[22rem] border-2 border-solid border-red-800">
-                <div className="m-auto flex h-5/6 w-5/6 bg-slate-400">
-                  <div className="flex flex-col  gap-1 justify-end px-4 pb-12">
-                    <h3 className="text-2xl font-bold">{project.name}</h3>
-                    <h5 className="font-serif font-light text-sm">{project.description}</h5>
-                    <a href={project.hostedLink}>
-                      <button className="bg-gradient-to-r from-indigo-900 via-indigo-700 to-indigo-500 px-2 py-1 my-1 font-bold text-white rounded">View Site</button>
+              <div className="flex h-[22rem] border-2 border-solid border-red-800 md:h-screen">
+                <div className="m-auto flex h-5/6 w-5/6 bg-slate-400 md:relative md:max-w-4xl">
+                  <div className="flex flex-col justify-end gap-1 pb-10 pl-5 md:absolute md:bottom-4 md:left-12">
+                    <h3 className="text-xl font-bold md:text-2xl">
+                      {project.name}
+                    </h3>
+                    <h5 className="font-serif text-xs font-light md:text-sm">
+                      {project.description}
+                    </h5>
+                    <a href={project.hostedLink} target="_blank" className="w-fit">
+                      <button className="my-1 rounded bg-gradient-to-r from-indigo-900 via-indigo-700 to-indigo-500 px-2 py-1 font-semibold text-white">
+                        View Site
+                      </button>
                     </a>
                   </div>
                 </div>
