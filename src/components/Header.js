@@ -1,11 +1,15 @@
 import Link from "next/link";
 import DropDown from "./Dropdown";
+import MobileMenuButton from "./MobileMenuButton";
+import MobileMenu from "./MobileMenu";
 
 const Header = () => {
   return (
     <nav className="min-w-full">
-      <div className="fixed right-10 top-2 mr-2">
-        <DropDown />
+      <div>
+        <MobileMenuButton />
+        {/* <DropDown /> */}
+        <MobileMenu />
       </div>
       <div className="mr-6 flex justify-end">
         <div className="hidden md:flex">

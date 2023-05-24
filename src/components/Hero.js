@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
     <div className="flex">
-      <div className="flex flex-col justify-between">
+      <div className="flex flex-col justify-between pt-8 md:pt-0">
         <h1 className="py-4 text-4xl font-extrabold text-white lg:text-6xl">
           Brett Abramson
         </h1>
