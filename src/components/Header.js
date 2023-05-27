@@ -13,7 +13,7 @@ const Header = () => {
       <div className="mr-6 flex justify-end">
         <div className="hidden md:flex">
           <Link
-            href="#"
+            href="#projects"
             className="mx-4 text-gray-400 hover:text-white hover:underline lg:mx-6 lg:text-3xl"
           >
             Projects
