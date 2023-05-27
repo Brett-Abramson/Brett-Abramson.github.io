@@ -17,9 +17,9 @@ const MobileMenu = () => {
           (showMobile ? " translate-x-0" : " translate-x-full")
         }
       >
-        <div className="flex justify-end mr-4">
+        <div className="mr-4 flex justify-end">
           <button
-            className="mt-5  px-3 font-bold text-center text-2xl text-slate-50"
+            className="mt-5  px-3 text-center text-2xl font-bold text-slate-50"
             onClick={() => displayMenu()}
           >
             X
@@ -27,9 +27,17 @@ const MobileMenu = () => {
         </div>
         <div className="relative top-1/4 mt-6 w-full text-center">
           <ul>
-            <li className="font-bold text-4xl text-slate-50 hover:text-5xl hover:underline py-6">Projects</li>
-            <li className="font-bold text-4xl text-slate-50 hover:text-5xl hover:underline py-6">Tools</li>
-            <li className="font-bold text-4xl text-slate-50 hover:text-5xl hover:underline py-6">Contact</li>
+            <li className="py-6 text-4xl font-bold text-slate-50 hover:text-5xl hover:underline">
+              <a href="#projects" onClick={() => displayMenu()}>
+                Projects
+              </a>
+            </li>
+            <li className="py-6 text-4xl font-bold text-slate-50 hover:text-5xl hover:underline">
+              <a href="#">Tools</a>
+            </li>
+            <li className="py-6 text-4xl font-bold text-slate-50 hover:text-5xl hover:underline">
+              <a href="#">Contact</a>
+            </li>
           </ul>
         </div>
         <div className="absolute bottom-0">
