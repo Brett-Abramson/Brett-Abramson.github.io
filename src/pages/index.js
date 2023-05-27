@@ -6,20 +6,20 @@ import SocialLinks from "@/components/SocialLinks";
 export default function Home() {
   return (
     <div className="">
-      <div className="container min-h-screen mx-auto">
+      <div className="container mx-auto min-h-screen">
         <Header />
         <main className="grid grid-cols-6 grid-rows-3">
-          <div className="col-start-2 col-span-6 row-start-2">
+          <div className="col-span-6 col-start-2 row-start-2">
             <Hero />
           </div>
-          <div className="col-start-6 row-start-2">
+          <div className="hidden md:block col-start-6 row-start-2">
             <SocialLinks />
           </div>
         </main>
       </div>
       <section className="container mx-auto">
-          <Projects />
-        </section>
+        <Projects />
+      </section>
     </div>
   );
 }
