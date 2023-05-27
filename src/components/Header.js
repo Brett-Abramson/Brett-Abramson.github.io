@@ -7,7 +7,6 @@ const Header = () => {
   return (
     <nav className="min-w-full">
       <div>
-        <MobileMenuButton />
         {/* <DropDown /> */}
         <MobileMenu />
       </div>
