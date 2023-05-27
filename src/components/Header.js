@@ -1,6 +1,3 @@
-import Link from "next/link";
-import DropDown from "./Dropdown";
-import MobileMenuButton from "./MobileMenuButton";
 import MobileMenu from "./MobileMenu";
 
 const Header = () => {
@@ -12,24 +9,24 @@ const Header = () => {
       </div>
       <div className="mr-6 flex justify-end">
         <div className="hidden md:flex">
-          <Link
+          <a
             href="#projects"
             className="mx-4 text-gray-400 hover:text-white hover:underline lg:mx-6 lg:text-3xl"
           >
             Projects
-          </Link>
-          <Link
+          </a>
+          <a
             href="#"
             className="mx-4 text-gray-400 hover:text-white hover:underline lg:mx-6 lg:text-3xl"
           >
             Tools
-          </Link>
-          <Link
+          </a>
+          <a
             href="#"
             className="mx-4 text-gray-400 hover:text-white hover:underline lg:mx-6 lg:text-3xl"
           >
             Contact
-          </Link>
+          </a>
         </div>
       </div>
     </nav>
