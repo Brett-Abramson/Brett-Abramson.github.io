@@ -54,7 +54,7 @@ const Projects = () => {
               className="my-12 flex h-96 border-0 border-solid border-red-800 md:h-screen"
               >
                 <div className="m-auto flex h-full w-full flex-col  md:relative md:max-w-4xl">
-                  <div className="relative h-full   bg-stone-100 hover:opacity-80">
+                  <div className="relative h-full  bg-stone-100 hover:opacity-80">
                     <Image
                       src={project.image}
                       alt={`Image of ${project.name} Landing Page`}
@@ -65,9 +65,9 @@ const Projects = () => {
                       className="object-contain"
                     />
                   </div>
-                  <div className="py-1" />
-                  <div className="flex flex-col justify-end gap-1 bg-gradient-to-tr from-slate-400 via-zinc-400 to-stone-500 py-4 pl-5 md:absolute md:bottom-4 md:left-12 md:pb-10">
-                    <h3 className="pt-2 text-xl font-bold md:text-2xl">
+                  <div className="py-0.5" />
+                  <div className="flex flex-col justify-end gap-1 bg-gradient-to-tr from-slate-400 via-zinc-400 to-stone-500 py-3 pl-5 md:absolute md:bottom-4 md:left-12 md:pb-10">
+                    <h3 className="text-xl font-bold md:text-2xl">
                       {project.name}
                     </h3>
                     <h5 className="font-serif text-xs font-thin md:text-sm md:font-light">
