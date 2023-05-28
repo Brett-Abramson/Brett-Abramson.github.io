@@ -8,7 +8,7 @@ const Hero = () => {
         <h3 className="py-2 font-serif text-xl text-gray-500">
           Software Developer
         </h3>
-        <button className="my-2 w-fit rounded bg-gradient-to-r from-indigo-900 via-indigo-700 to-indigo-500 px-4 py-2 font-bold text-slate-50 hover:scale-110">
+        <button className="my-2 w-fit rounded bg-gradient-to-r from-indigo-900 via-indigo-700 to-indigo-500 px-4 py-2 text-sm font-semibold text-slate-50 hover:scale-110 md:text-base">
           About Me
         </button>
       </div>
