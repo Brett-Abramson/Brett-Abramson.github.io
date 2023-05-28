@@ -39,18 +39,22 @@ const Projects = () => {
     <div className="h-full w-full bg-slate-100" id="projects">
       <div className="flex flex-col">
         <div className="flex flex-col items-center py-5">
-          <h3 className="pt-2 font-serif text-2xl font-extralight">Projects</h3>
-          <h2 className="py-4 text-4xl md:py-6">Latest Works</h2>
+          <h3 className="pt-2 font-serif text-2xl font-extralight text-slate-950">
+            Projects
+          </h3>
+          <h2 className="py-1 text-4xl font-semibold text-slate-950">
+            Latest Works
+          </h2>
         </div>
         <div className="">
           {projects.map((project, index) => {
             return (
               <div
-                className="flex h-[22rem] border-2 border-solid border-red-800 md:h-screen"
-                key={index}
+              key={index}
+              className="my-10 flex h-96 border-0 border-solid border-red-800 md:h-screen"
               >
-                <div className="m-auto flex h-5/6 w-5/6 flex-col bg-slate-500 md:relative md:max-w-4xl">
-                  <div className="relative h-full w-full bg-stone-100 border-2 border-solid border-green-400 hover:opacity-80">
+                <div className="m-auto flex h-full w-full flex-col  md:relative md:max-w-4xl">
+                  <div className="relative h-full   bg-stone-100 hover:opacity-80">
                     <Image
                       src={project.image}
                       alt={`Image of ${project.name} Landing Page`}
@@ -61,8 +65,9 @@ const Projects = () => {
                       className="object-contain"
                     />
                   </div>
-                  <div className="flex flex-col justify-end gap-1 pb-2 pl-5 md:absolute md:bottom-4 md:left-12 md:pb-10">
-                    <h3 className="text-xl font-bold md:text-2xl">
+                  <div className="py-1" />
+                  <div className="flex flex-col justify-end gap-1 bg-gradient-to-tr from-slate-400 via-zinc-400 to-stone-500 pb-2 pl-5 md:absolute md:bottom-4 md:left-12 md:pb-10">
+                    <h3 className="pt-2 text-xl font-bold md:text-2xl">
                       {project.name}
                     </h3>
                     <h5 className="font-serif text-xs font-thin md:text-sm md:font-light">
