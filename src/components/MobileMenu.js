@@ -17,9 +17,9 @@ const MobileMenu = () => {
           (showMobile ? " translate-x-0" : " translate-x-full")
         }
       >
-        <div className="mr-4 flex justify-end">
+        <div className="mr-6 flex justify-end">
           <button
-            className="mt-5  px-3 text-center text-2xl font-bold text-slate-50"
+            className="mt-8 px-4 text-center text-2xl font-bold text-slate-50"
             onClick={() => displayMenu()}
           >
             X

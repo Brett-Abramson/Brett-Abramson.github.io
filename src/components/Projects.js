@@ -51,7 +51,7 @@ const Projects = () => {
             return (
               <div
               key={index}
-              className="my-10 flex h-96 border-0 border-solid border-red-800 md:h-screen"
+              className="my-12 flex h-96 border-0 border-solid border-red-800 md:h-screen"
               >
                 <div className="m-auto flex h-full w-full flex-col  md:relative md:max-w-4xl">
                   <div className="relative h-full   bg-stone-100 hover:opacity-80">
@@ -66,7 +66,7 @@ const Projects = () => {
                     />
                   </div>
                   <div className="py-1" />
-                  <div className="flex flex-col justify-end gap-1 bg-gradient-to-tr from-slate-400 via-zinc-400 to-stone-500 pb-2 pl-5 md:absolute md:bottom-4 md:left-12 md:pb-10">
+                  <div className="flex flex-col justify-end gap-1 bg-gradient-to-tr from-slate-400 via-zinc-400 to-stone-500 py-4 pl-5 md:absolute md:bottom-4 md:left-12 md:pb-10">
                     <h3 className="pt-2 text-xl font-bold md:text-2xl">
                       {project.name}
                     </h3>
