@@ -1,7 +1,7 @@
 import Image from "next/image";
-// import VinylVaultImage from "/static/images/VinylVault.png";
-// import LANBuddyImage from "/static/images/LANBuddy.png";
-// import LostInTheWoodsImage from "/static/images/LostInTheWoods.png";
+import VinylVaultImage from "../../public/static/images/VinylVault.png";
+import LANBuddyImage from "../../public/static/images/LANBuddy.png";
+import LostInTheWoodsImage from "../../public/static/images/LostInTheWoods.png";
 
 const Projects = () => {
   const projects = [
@@ -12,8 +12,8 @@ const Projects = () => {
         "https://vinyl-vault-frontend-git-main-brettmabramson-gmailcom.vercel.app/",
       gitHubFrontEnd: "https://github.com/Brett-Abramson/Vinyl-Vault-Frontend",
       gitHubBackEnd: "https://github.com/Brett-Abramson/Vinyl_Vault_Backend",
-      // image: { VinylVaultImage },
-      image: "/static/images/VinylVault.png",
+      image:  VinylVaultImage ,
+      // image: "/static/images/VinylVault.png",
     },
     {
       name: "LANBuddy",
@@ -21,8 +21,8 @@ const Projects = () => {
       hostedLink: "https://lanbuddy.herokuapp.com/",
       gitHubFrontEnd: "https://github.com/Brett-Abramson/LANbuddy_frontend",
       gitHubBackEnd: "https://github.com/jdbohac/project_4_backend",
-      // // image: { LANBuddyImage },
-      image: "/static/images/LANBuddy.png",
+      image: LANBuddyImage ,
+      // image: "/static/images/LANBuddy.png",
     },
     {
       name: "Lost in the Woods",
@@ -30,8 +30,8 @@ const Projects = () => {
       hostedLink: "https://lost-in-the-woods.herokuapp.com/",
       gitHubFrontEnd: "https://github.com/Brett-Abramson/project_3_frontend",
       gitHubBackEnd: "https://github.com/Brett-Abramson/project_3_backend",
-      // // image: { LostInTheWoodsImage },
-      image: "/static/images/LostInTheWoods.png",
+      image:  LostInTheWoodsImage ,
+      // image: "/static/images/LostInTheWoods.png",
     },
   ];
 
@@ -46,27 +46,27 @@ const Projects = () => {
             Latest Works
           </h2>
         </div>
-        <div className="">
+        <div className="mx-5 ">
           {projects.map((project, index) => {
             return (
               <div
-              key={index}
-              className="my-12 flex h-96 border-0 border-solid border-red-800 md:h-screen"
+                key={index}
+                className="my-8 flex h-full shadow-md shadow-slate-400 sm:shadow-none"
               >
-                <div className="m-auto flex h-full w-full flex-col  md:relative md:max-w-4xl">
-                  <div className="relative h-full  bg-stone-100 hover:opacity-80">
+                <div className="m-auto flex border-y border-x border-solid border-red-800 w-full flex-col md:max-w-xl lg:max-w-4xl md:flex-row">
+                  <div className="relative h-full bg-stone-100 hover:opacity-80 ">
                     <Image
                       src={project.image}
                       alt={`Image of ${project.name} Landing Page`}
                       // width={500}
                       // height={500}
                       fill
-                      sizes={"50vw"}
-                      className="object-contain"
+                      sizes="75vw"
+                      className="!static object-contain"
                     />
                   </div>
-                  <div className="py-0.5" />
-                  <div className="flex flex-col justify-end gap-1 bg-gradient-to-tr from-slate-400 via-zinc-400 to-stone-500 py-3 pl-5 md:absolute md:bottom-4 md:left-12 md:pb-10">
+                  <div className="py-0.5 md:py-0" />
+                  <div className="flex flex-col justify-end gap-1 bg-gradient-to-tr from-slate-400 via-zinc-400 to-stone-500 py-3 pl-5 md:w-1/3  ">
                     <h3 className="text-xl font-bold md:text-2xl">
                       {project.name}
                     </h3>
