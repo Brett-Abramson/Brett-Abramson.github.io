@@ -1,12 +1,15 @@
 const ProjectModal = (props) => {
+  return (
+    <div className=" z-10  h-full w-full overflow-auto">
 
-    return (
-        <div className="hidden fixed z-10 left-0 top-0 w-full h-full overflow-auto">
-            <div className="mt-[15%] mx-auto p-5 border w-4/5">
-                
+          <div className="my-8 h-full shadow-slate-400 md:shadow-md">
+            <div className="m-auto flex w-full flex-col text-slate-50 rounded-sm border-x border-y sm:border-solid sm:border-zinc-800 md:max-w-xl md:flex-row lg:max-w-4xl lg:border-none xl:max-w-6xl">
+                Modal or Flipside of Card
+                {props.project.name}
             </div>
-        </div>
-    )
-}
+          </div>
+    </div>
+  );
+};
 
-export default ProjectModal
+export default ProjectModal;
