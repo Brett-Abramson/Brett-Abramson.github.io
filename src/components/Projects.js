@@ -1,11 +1,22 @@
 import Image from "next/image";
 import VinylVaultImage from "../../public/static/images/VinylVault.png";
+import VinylVaultGIF from "../../public/static/images/VinylVaultGIF.gif"
 import LANBuddyImage from "../../public/static/images/LANBuddy.png";
+import LANBuddyGIF from "../../public/static/images/LANBuddyGIF.gif"
 import LostInTheWoodsImage from "../../public/static/images/LostInTheWoods.png";
+import LostInTheWoodsGIF  from "../../public/static/images/LostInTheWoods.png"
 import { useState } from "react";
-import ResponsiveCard from "./Card";
+import ProjectModal from "./ProjectModal";
 
 const Projects = () => {
+  const [openModal, setOpenModal] = useState(false);
+  const [modalData, setModalData] = useState(null);
+
+  const toggleModal = (data) => {
+    setOpenModal(!openModal);
+    setModalData(data);
+  };
+
   const projects = [
     {
       name: "Vinyl Vault",
@@ -15,7 +26,9 @@ const Projects = () => {
       gitHubFrontEnd: "https://github.com/Brett-Abramson/Vinyl-Vault-Frontend",
       gitHubBackEnd: "https://github.com/Brett-Abramson/Vinyl_Vault_Backend",
       image: VinylVaultImage,
+      gif: VinylVaultGIF,
       techStack: ["Next.js", "Django", "Tailwind CSS", "Python", "Javascript"],
+      details: "Vinyl Vault is a personal album database management application. It combines the power of Next.js for the frontend and Django REST Framework fpr the backend API. By seemlessly integrating Spotify's API, it automates data retrieval, reducing manual input and enhancing usability. The application's intuitive interface is styled with Tailwind CSS, providing a user-friendly experience."
     },
     {
       name: "LANBuddy",
@@ -24,6 +37,7 @@ const Projects = () => {
       gitHubFrontEnd: "https://github.com/Brett-Abramson/LANbuddy_frontend",
       gitHubBackEnd: "https://github.com/jdbohac/project_4_backend",
       image: LANBuddyImage,
+      gif: LANBuddyGIF,
       techStack: ["React", "Django", "MaterialUI", "Python", "Javascript"],
     },
     {
@@ -33,6 +47,7 @@ const Projects = () => {
       gitHubFrontEnd: "https://github.com/Brett-Abramson/project_3_frontend",
       gitHubBackEnd: "https://github.com/Brett-Abramson/project_3_backend",
       image: LostInTheWoodsImage,
+      gif: LostInTheWoodsGIF,
       techStack: ["Mongoose", "Express", "React", "Node.js", "Javascript"],
     },
   ];
@@ -56,62 +71,68 @@ const Projects = () => {
                 className="my-8 h-full shadow-slate-400 md:shadow-md"
               >
                 <div className="m-auto flex w-full flex-col rounded-sm border-x border-y sm:border-solid sm:border-zinc-800 md:max-w-xl md:flex-row lg:max-w-4xl lg:border-none xl:max-w-6xl">
-                      <div
-                        className={`relative h-full opacity-90 hover:cursor-pointer hover:opacity-100 ${
-                          index % 2 === 0 ? "sm:order-3" : ""
-                        } sm:border-r sm:border-zinc-800 lg:border lg:border-zinc-800 lg:drop-shadow-lg`}
-                      >
-                        <Image
-                          src={project.image}
-                          alt={`Image of ${project.name} Landing Page`}
-                          // width={500}
-                          // height={500}
-                          fill
-                          sizes="75vw"
-                          className="!static object-contain"
-                        />
-                      </div>
-                      <div
-                        className={`py-0.5 md:py-0 lg:px-5 xl:px-10 ${
-                          index % 2 === 0 ? "sm:order-2" : ""
-                        }`}
-                      />
-                      <div
-                        className={`flex flex-col gap-1 ${
-                          index % 2 === 0
-                            ? "bg-gradient-to-tl sm:order-1"
-                            : "bg-gradient-to-tr"
-                        }  from-slate-400 via-zinc-400 to-stone-500 py-3 sm:justify-evenly md:w-1/3 lg:border  lg:border-zinc-800 lg:shadow-lg lg:hover:scale-105 lg:hover:cursor-pointer xl:px-5`}
-                      >
-                        <h3 className="text-center text-xl font-bold lg:text-2xl">
-                          {project.name}
-                        </h3>
-                        <div className="m-auto mb-1 w-3/4 border-y bg-zinc-200 md:hidden" />
-                        <h4 className="hidden text-center font-serif text-sm font-light lg:block">
-                          {project.description}
-                        </h4>
-                        <h5 className="text-center font-serif text-xs font-thin md:text-sm lg:font-light">
-                          -{" "}
-                          {project.techStack.map((tech) => {
-                            return `${tech} -`;
-                          })}
-                        </h5>
+                  <div
+                    className={`relative h-full opacity-90 hover:cursor-pointer hover:opacity-100 ${
+                      index % 2 === 0 ? "sm:order-3" : ""
+                    } sm:border-r sm:border-zinc-800 lg:border lg:border-zinc-800 lg:drop-shadow-lg`}
+                    onClick={() => {
+                      toggleModal(project);
+                    }}
+                  >
+                    <Image
+                      src={project.image}
+                      alt={`Image of ${project.name} Landing Page`}
+                      // width={500}
+                      // height={500}
+                      fill
+                      sizes="75vw"
+                      className="!static object-contain"
+                    />
+                  </div>
+                  <div
+                    className={`py-0.5 md:py-0 lg:px-5 xl:px-10 ${
+                      index % 2 === 0 ? "sm:order-2" : ""
+                    }`}
+                  />
+                  <div
+                    className={`flex flex-col gap-1 ${
+                      index % 2 === 0
+                        ? "bg-gradient-to-tl sm:order-1"
+                        : "bg-gradient-to-tr"
+                    }  from-slate-400 via-zinc-400 to-stone-500 py-3 sm:justify-evenly md:w-1/3 lg:border  lg:border-zinc-800 lg:shadow-lg lg:hover:scale-105 lg:hover:cursor-pointer xl:px-5`}
+                    onClick={() => {
+                      toggleModal(project);
+                    }}
+                  >
+                    <h3 className="text-center text-xl font-bold lg:text-2xl">
+                      {project.name}
+                    </h3>
+                    <div className="m-auto mb-1 w-3/4 border-y bg-zinc-200 md:hidden" />
+                    <h4 className="hidden text-center font-serif text-sm font-light lg:block">
+                      {project.description}
+                    </h4>
+                    <h5 className="text-center font-serif text-xs font-thin md:text-sm lg:font-light">
+                      -{" "}
+                      {project.techStack.map((tech) => {
+                        return `${tech} -`;
+                      })}
+                    </h5>
 
-                        {/* <a
+                    {/* <a
                         href={project.hostedLink}
                         target="_blank"
                         className="w-fit"
                       >
                         <Button buttonText={"Visit Site"} />
                       </a> */}
-                      </div>
+                  </div>
                 </div>
               </div>
             );
           })}
+          {openModal && <ProjectModal project={modalData} toggleModal={toggleModal} />}
         </div>
       </div>
-      <ResponsiveCard />
     </div>
   );
 };
