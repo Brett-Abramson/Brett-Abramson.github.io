@@ -1,12 +1,13 @@
 import Image from "next/image";
 import VinylVaultImage from "../../public/static/images/VinylVault.png";
-import VinylVaultGIF from "../../public/static/images/VinylVaultGIF.gif"
+import VinylVaultGIF from "../../public/static/images/VinylVaultGIF.gif";
 import LANBuddyImage from "../../public/static/images/LANBuddy.png";
-import LANBuddyGIF from "../../public/static/images/LANBuddyGIF.gif"
+import LANBuddyGIF from "../../public/static/images/LANBuddyGIF.gif";
 import LostInTheWoodsImage from "../../public/static/images/LostInTheWoods.png";
-import LostInTheWoodsGIF  from "../../public/static/images/LostInTheWoods.png"
+import LostInTheWoodsGIF from "../../public/static/images/LostInTheWoods.png";
 import { useState } from "react";
 import ProjectModal from "./ProjectModal";
+
 
 const Projects = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -28,7 +29,18 @@ const Projects = () => {
       image: VinylVaultImage,
       gif: VinylVaultGIF,
       techStack: ["Next.js", "Django", "Tailwind CSS", "Python", "Javascript"],
-      details: "Vinyl Vault is a personal album database management application. It combines the power of Next.js for the frontend and Django REST Framework fpr the backend API. By seemlessly integrating Spotify's API, it automates data retrieval, reducing manual input and enhancing usability. The application's intuitive interface is styled with Tailwind CSS, providing a user-friendly experience."
+      techIcons: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+      ],
+      details:
+        "Vinyl Vault is a personal album database management application. It combines the power of Next.js for the frontend and Django REST Framework fpr the backend API. By seemlessly integrating Spotify's API, it automates data retrieval, reducing manual input and enhancing usability. The application's intuitive interface is styled with Tailwind CSS, providing a user-friendly experience.",
+
     },
     {
       name: "LANBuddy",
@@ -39,6 +51,15 @@ const Projects = () => {
       image: LANBuddyImage,
       gif: LANBuddyGIF,
       techStack: ["React", "Django", "MaterialUI", "Python", "Javascript"],
+      techIcons: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+      ],
     },
     {
       name: "Lost in the Woods",
@@ -48,7 +69,16 @@ const Projects = () => {
       gitHubBackEnd: "https://github.com/Brett-Abramson/project_3_backend",
       image: LostInTheWoodsImage,
       gif: LostInTheWoodsGIF,
-      techStack: ["Mongoose", "Express", "React", "Node.js", "Javascript"],
+      techStack: [ "React", "Mongoose", "Express", "Node.js", "Javascript"],
+      techIcons: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+      ]
     },
   ];
 
@@ -130,7 +160,9 @@ const Projects = () => {
               </div>
             );
           })}
-          {openModal && <ProjectModal project={modalData} toggleModal={toggleModal} />}
+          {openModal && (
+            <ProjectModal project={modalData} toggleModal={toggleModal} />
+          )}
         </div>
       </div>
     </div>
