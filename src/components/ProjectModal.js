@@ -39,7 +39,7 @@ const ProjectModal = (props) => {
           <div className="mx-4 my-2 flex justify-evenly">
             {props.project.techIcons.map((icon, index) => {
               return (
-                <img className="h-8" src={icon} alt="techStack Icon" key={index} />
+                <Image width={32} height={32} src={icon} alt="techStack Icon" key={index} />
               )
             })}
           </div>
