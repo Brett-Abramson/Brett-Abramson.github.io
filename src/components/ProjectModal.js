@@ -38,6 +38,13 @@ const ProjectModal = (props) => {
           {/* Description of Site, make it more technical */}
           {/* Links to live site and github */}
           {/* Tech used to create the project */}
+          <div className="mx-4 my-2 flex justify-evenly">
+            {props.project.techIcons.map((icon) => {
+              return (
+                <img className="h-8" src={icon} />
+              )
+            })}
+          </div>
         </div>
       </div>
     </div>
