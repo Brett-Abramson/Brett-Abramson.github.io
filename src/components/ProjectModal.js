@@ -30,18 +30,16 @@ const ProjectModal = (props) => {
             />
           </div>
           <div className="">
-
+            {/* Links to live site and github */}
           </div>
           <div className="pt-3 mx-2">
             <p className="px-2">{props.project.details}</p>
           </div>
-          {/* Description of Site, make it more technical */}
-          {/* Links to live site and github */}
           {/* Tech used to create the project */}
           <div className="mx-4 my-2 flex justify-evenly">
-            {props.project.techIcons.map((icon) => {
+            {props.project.techIcons.map((icon, index) => {
               return (
-                <img className="h-8" src={icon} />
+                <img className="h-8" src={icon} alt="techStack Icon" key={index} />
               )
             })}
           </div>
