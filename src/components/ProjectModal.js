@@ -1,3 +1,5 @@
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
 const ProjectModal = (props) => {
@@ -11,10 +13,12 @@ const ProjectModal = (props) => {
       className="fixed left-0 top-0 z-10 h-full w-full overflow-auto bg-slate-950 bg-opacity-90"
       onClick={handleModalClick}
     >
-      <div className="z-20 mx-6 mt-[33%] h-full shadow-slate-400 md:shadow-md"
-      onClick={handleModalClick}>
+      <div
+        className="z-20 mx-6 mt-[33%] h-full shadow-slate-400 md:shadow-md"
+        onClick={handleModalClick}
+      >
         <div className="flex w-full flex-col justify-center rounded border-x border-y border-solid border-zinc-50 bg-zinc-800 text-slate-50 md:max-w-xl md:flex-row lg:max-w-4xl lg:border-none xl:max-w-6xl">
-          <h2 className="text-center text-2xl font-bold underline my-1 mb-2">
+          <h2 className="my-1 mb-2 text-center text-2xl font-bold underline">
             {props.project.name}
           </h2>
           <div className="mx-1">
@@ -29,18 +33,30 @@ const ProjectModal = (props) => {
               className="!static object-contain"
             />
           </div>
-          <div className="">
+          <div className="mx-2">
+            <div className="flex flex-col justify-center">
+              <a href={props.project.hostedLink} className="">
+                <FontAwesomeIcon icon={faLink} />
+              </a>
+              <p>Live Site</p>
+            </div>
             {/* Links to live site and github */}
           </div>
-          <div className="pt-3 mx-2">
+          <div className="mx-2 pt-3">
             <p className="px-2">{props.project.details}</p>
           </div>
-          {/* Tech used to create the project */}
           <div className="mx-4 my-2 flex justify-evenly">
-            {props.project.techIcons.map((icon, index) => {
+            {props.project.techStack.map((tech, index) => {
               return (
-                <Image width={32} height={32} src={icon} alt="techStack Icon" key={index} />
-              )
+                <Image
+                  width={32}
+                  height={32}
+                  src={tech.icon}
+                  alt={`${tech.name} Icon`}
+                  title={tech.name}
+                  key={index}
+                />
+              );
             })}
           </div>
         </div>
