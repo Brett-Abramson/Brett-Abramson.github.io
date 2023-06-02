@@ -32,6 +32,7 @@ const Projects = () => {
       techIcons: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
@@ -54,6 +55,7 @@ const Projects = () => {
       techIcons: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
