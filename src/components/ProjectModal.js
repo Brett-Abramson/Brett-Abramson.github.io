@@ -1,3 +1,4 @@
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
@@ -33,14 +34,25 @@ const ProjectModal = (props) => {
               className="!static object-contain"
             />
           </div>
-          <div className="mx-2">
-            <div className="flex flex-col justify-center">
-              <a href={props.project.hostedLink} className="">
+          <div className="mx-2 flex justify-around">
+            <div className="flex flex-col items-center">
+              <p className="text-xs sm:hidden">Frontend</p>
+              <a href={props.project.gitHubFrontend} target={"_blank"} title="Frontend Repository">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            </div>
+            <div className="flex flex-col items-center">
+              <p className="text-xs sm:hidden">Live Site</p>
+              <a href={props.project.hostedLink} target={"_blank"} className="" title="Live Site">
                 <FontAwesomeIcon icon={faLink} />
               </a>
-              <p>Live Site</p>
             </div>
-            {/* Links to live site and github */}
+            <div className="flex flex-col items-center">
+              <p className="text-xs sm:hidden">Backend</p>
+              <a href={props.project.gitHubBackend} target={"_blank"} title="Backend Repository">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            </div>
           </div>
           <div className="mx-2 pt-3">
             <p className="px-2">{props.project.details}</p>

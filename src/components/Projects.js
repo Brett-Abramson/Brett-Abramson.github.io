@@ -24,8 +24,8 @@ const Projects = () => {
       description: "An album companion and database App",
       hostedLink:
         "https://vinyl-vault-frontend-git-main-brettmabramson-gmailcom.vercel.app/",
-      gitHubFrontEnd: "https://github.com/Brett-Abramson/Vinyl-Vault-Frontend",
-      gitHubBackEnd: "https://github.com/Brett-Abramson/Vinyl_Vault_Backend",
+      gitHubFrontend: "https://github.com/Brett-Abramson/Vinyl-Vault-Frontend",
+      gitHubBackend: "https://github.com/Brett-Abramson/Vinyl_Vault_Backend",
       image: VinylVaultImage,
       gif: VinylVaultGIF,
       techStack: [
@@ -70,8 +70,8 @@ const Projects = () => {
       name: "LANBuddy",
       description: "A Video Game Matching and Management App",
       hostedLink: "https://lanbuddy.herokuapp.com/",
-      gitHubFrontEnd: "https://github.com/Brett-Abramson/LANbuddy_frontend",
-      gitHubBackEnd: "https://github.com/jdbohac/project_4_backend",
+      gitHubFrontend: "https://github.com/Brett-Abramson/LANbuddy_frontend",
+      gitHubBackend: "https://github.com/jdbohac/project_4_backend",
       image: LANBuddyImage,
       gif: LANBuddyGIF,
       techStack: [
@@ -89,7 +89,7 @@ const Projects = () => {
         },
         {
           name: "MaterialUI",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
         },
         {
           name: "Python",
@@ -113,8 +113,8 @@ const Projects = () => {
       name: "Lost in the Woods",
       description: "A community sourced hiking and camping companion app",
       hostedLink: "https://lost-in-the-woods.herokuapp.com/",
-      gitHubFrontEnd: "https://github.com/Brett-Abramson/project_3_frontend",
-      gitHubBackEnd: "https://github.com/Brett-Abramson/project_3_backend",
+      gitHubFrontend: "https://github.com/Brett-Abramson/project_3_frontend",
+      gitHubBackend: "https://github.com/Brett-Abramson/project_3_backend",
       image: LostInTheWoodsImage,
       gif: LostInTheWoodsGIF,
       techStack: [
