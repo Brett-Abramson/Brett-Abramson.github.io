@@ -43,7 +43,7 @@ const Projects = () => {
         },
         {
           name: "TailwindCSS",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg"
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
         },
         {
           name: "Python",
@@ -168,9 +168,9 @@ const Projects = () => {
                 key={index}
                 className="my-8 h-full shadow-slate-400 md:shadow-md"
               >
-                <div className="m-auto flex w-full flex-col rounded-sm border-x border-y sm:border-solid sm:border-zinc-800 md:max-w-xl md:flex-row lg:max-w-4xl lg:border-none xl:max-w-6xl">
+                <div className="m-auto flex w-full flex-col rounded-sm border-x border-y sm:border-solid sm:border-zinc-800 md:max-w-xl md:flex-row lg:max-w-4xl lg:border-none xl:max-w-6xl md:hover:scale-105 md:hover:cursor-pointer md:hover:transition md:hover:ease-in-out lg:hover:scale-100 lg:hover:cursor-default">
                   <div
-                    className={`relative h-full opacity-90 hover:cursor-pointer hover:opacity-100 ${
+                    className={`relative h-full opacity-90 lg:hover:cursor-pointer lg:hover:transition lg:hover:ease-in-out lg:hover:opacity-100 lg:hover:scale-105 ${
                       index % 2 === 0 ? "sm:order-3" : ""
                     } sm:border-r sm:border-zinc-800 lg:border lg:border-zinc-800 lg:drop-shadow-lg`}
                     onClick={() => {
@@ -183,7 +183,7 @@ const Projects = () => {
                       // width={500}
                       // height={500}
                       fill
-                      sizes="75vw"
+                      // sizes="75vw"
                       className="!static object-contain"
                     />
                   </div>
@@ -197,7 +197,7 @@ const Projects = () => {
                       index % 2 === 0
                         ? "bg-gradient-to-tl sm:order-1"
                         : "bg-gradient-to-tr"
-                    }  from-slate-400 via-zinc-400 to-stone-500 py-3 sm:justify-evenly md:w-1/3 lg:border  lg:border-zinc-800 lg:shadow-lg lg:hover:scale-105 lg:hover:cursor-pointer xl:px-5`}
+                    }  from-slate-400 via-zinc-400 to-stone-500 py-3 sm:justify-evenly md:w-1/3 lg:border  lg:border-zinc-800 lg:shadow-lg lg:hover:scale-105 lg:hover:cursor-pointer lg:hover:transition lg:hover:ease-in-out xl:px-5`}
                     onClick={() => {
                       toggleModal(project);
                     }}
