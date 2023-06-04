@@ -19,7 +19,7 @@ const Header = () => {
             href="#"
             className="mx-4 text-zinc-300 hover:text-white hover:underline lg:mx-6 lg:text-3xl"
           >
-            Tools
+            Skills
           </a>
           <a
             href="#"
