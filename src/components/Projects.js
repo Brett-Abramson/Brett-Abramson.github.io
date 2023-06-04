@@ -210,9 +210,10 @@ const Projects = () => {
                       {project.description}
                     </h4>
                     <h5 className="text-center font-serif text-xs font-thin md:text-sm lg:font-light">
-                      -
-                      {project.techStack.slice(0, -2).map((tech) => {
-                        return ` ${tech.name} -`;
+                      {project.techStack.slice(0, -2).map((tech, index) => {
+                        return index !== project.techStack.length - 3 
+                        ? ` ${tech.name} -`
+                        : ` ${tech.name}`
                       })}
                     </h5>
 
