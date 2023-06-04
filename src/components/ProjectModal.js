@@ -55,7 +55,7 @@ const ProjectModal = (props) => {
               </a>
             </div>
           </div>
-          <div className="mx-1 rounded-sm border border-zinc-100">
+          <div className="mx-4 rounded-sm border border-zinc-100">
             <Image
               src={props.project.gif}
               alt={`GIF of ${props.project.name} Landing Page`}
@@ -91,5 +91,3 @@ const ProjectModal = (props) => {
 };
 
 export default ProjectModal;
-
-// 6/2 add . & commit reads: increased responsiveness of modal, changed tailwindcss icon, improved hover on projects page
