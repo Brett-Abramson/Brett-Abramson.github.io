@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 const AboutModal = (props) => {
   const handleModalClick = (event) => {
     if (event.target === event.currentTarget) {
@@ -16,7 +18,8 @@ const AboutModal = (props) => {
       >
         <div className="flex w-full flex-col justify-center rounded border-x border-y border-solid border-zinc-50 bg-zinc-800 text-slate-50 sm:m-auto sm:max-w-md md:max-w-lg lg:max-w-xl">
           <div className="mx-6">
-            <h2 className="m-4 mt-8 text-2xl">About Me</h2>
+            <h2 className="mt-8 text-2xl">About Me</h2>
+            <div className="mb-4 w-2/3 sm:w-1/3 py-1 bg-indigo-700" />
             <p className="pb-4 text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
               vulputate varius sodales. Nullam aliquam ex vitae purus rutrum
@@ -29,28 +32,28 @@ const AboutModal = (props) => {
               interdum at tellus. Mauris ac nunc ac felis vestibulum interdum.
             </p>
             <div>
-                <h4 className="text-right my-2">Want to learn more?</h4>
+              <h4 className="my-2 text-right md:text-lg animate-pulse">Want to learn more?</h4>
               <ul className="my-4 flex justify-around">
-                <li className="hover:text-white hover:scale-105 hover:underline">
+                <li className="hover:scale-105 hover:text-white hover:underline">
                   <a
                     href="https://www.linkedin.com/in/brettmabramson/"
                     target="_blank"
-                    className="rounded border bg-slate-600 p-1 text-lg "
                   >
-                    LinkedIN
+                    <Button buttonText={"LinkedIN"} />
                   </a>
                 </li>
-                <li className="hover:text-white hover:scale-105 hover:underline">
+                <li className="hover:scale-105 hover:text-white hover:underline">
+                  <a href="https://github.com/Brett-Abramson" target="_blank">
+                    <Button buttonText={"github"} />
+                  </a>
+                </li>
+                <li className="hover:scale-105 hover:text-white hover:underline">
                   <a
-                    href="https://github.com/Brett-Abramson"
+                    href="https://docs.google.com/document/d/1mIJZNi9hhq4iV6RIKMfDjweFYtqGjTKJPsDaFCwXAkQ/edit#heading=h.gjdgxs"
                     target="_blank"
-                    className="rounded border bg-slate-600 p-1 text-lg"
                   >
-                    github
+                    <Button buttonText={"Resume"} />
                   </a>
-                </li>
-                <li className="hover:text-white hover:scale-105 hover:underline">
-                    <a href="https://docs.google.com/document/d/1mIJZNi9hhq4iV6RIKMfDjweFYtqGjTKJPsDaFCwXAkQ/edit#heading=h.gjdgxs" target="_blank" className="rounded border bg-slate-600 p-1 text-lg">Resume</a>
                 </li>
               </ul>
             </div>
