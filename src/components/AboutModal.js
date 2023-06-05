@@ -11,6 +11,7 @@ const AboutModal = (props) => {
     <div
       className="fixed left-0 top-0 z-10 h-full w-full overflow-auto bg-zinc-950 bg-opacity-95"
       onClick={handleModalClick}
+      id="aboutMe"
     >
       <div
         className="z-20 mx-4 mt-[33%] h-full shadow-slate-400 sm:mt-20 md:shadow-md"

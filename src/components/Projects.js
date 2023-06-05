@@ -159,7 +159,7 @@ const Projects = () => {
             Latest Works
           </h2>
         </div>
-        <div className="mx-5 rounded-xl bg-slate-900 px-2 md:border-x">
+        <div className="mx-5 mb-8 rounded-xl bg-slate-900 px-2 md:border-x">
           {projects.map((project, index) => {
             return (
               <div
