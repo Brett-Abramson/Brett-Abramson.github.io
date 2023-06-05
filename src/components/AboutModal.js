@@ -20,7 +20,7 @@ const AboutModal = (props) => {
         <div className="flex w-full flex-col justify-center rounded border-x border-y border-solid border-zinc-50 bg-zinc-800 text-slate-50 sm:m-auto sm:max-w-md md:max-w-lg lg:max-w-xl">
           <div className="mx-6">
             <h2 className="mt-8 text-2xl">About Me</h2>
-            <div className="mb-4 w-2/3 sm:w-1/3 py-1 bg-indigo-700" />
+            <div className="mb-4 w-2/3 sm:w-1/2 py-1 bg-indigo-700" />
             <p className="pb-4 text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
               vulputate varius sodales. Nullam aliquam ex vitae purus rutrum
