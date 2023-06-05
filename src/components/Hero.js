@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Button from "./Button";
 import AboutModal from "./AboutModal";
 
 const Hero = () => {
