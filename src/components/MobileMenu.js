@@ -33,10 +33,10 @@ const MobileMenu = () => {
               </a>
             </li>
             <li className="py-6 text-4xl font-bold text-slate-50 hover:text-5xl hover:underline">
-              <a href="#">Tools</a>
+              <a href="#skills" onClick={() => displayMenu()}>Tools</a>
             </li>
             <li className="py-6 text-4xl font-bold text-slate-50 hover:text-5xl hover:underline">
-              <a href="#">Contact</a>
+              <a href="#" onClick={() => displayMenu()}>Contact</a>
             </li>
           </ul>
         </div>
