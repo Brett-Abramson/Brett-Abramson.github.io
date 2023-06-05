@@ -63,7 +63,7 @@ const Skills = () => {
   return (
     <div className="text-slate-100" id="skills">
       <h2 className="my-8 text-center text-3xl font-bold md:my-14">Skills</h2>
-      <div className="mx-5 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+      <div className="mx-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
         {technologies.map((technology, index) => {
           return (
             <div
@@ -77,7 +77,7 @@ const Skills = () => {
                 alt={`${technology.name} Icon`}
                 title={technology.name}
               />
-              <h5 className="text-lg">{technology.name}</h5>
+              <h5 className="font-serif">{technology.name}</h5>
             </div>
           );
         })}
