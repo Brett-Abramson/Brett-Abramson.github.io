@@ -16,13 +16,13 @@ const Header = () => {
             Projects
           </a>
           <a
-            href="#"
+            href="#skills"
             className="mx-4 text-zinc-300 hover:text-white hover:underline lg:mx-6 lg:text-3xl"
           >
             Skills
           </a>
           <a
-            href="#"
+            href="#aboutMe"
             className="mx-4 text-zinc-300 hover:text-white hover:underline lg:mx-6 lg:text-3xl"
           >
             Contact
