@@ -63,19 +63,19 @@ const Skills = () => {
   return (
     <div className="text-slate-100" id="skills">
       <h2 className="my-8 text-center text-3xl font-bold md:my-14">Skills</h2>
-      <div className="mx-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+      <div className="mx-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {technologies.map((technology, index) => {
           return (
             <div
               key={index}
               className="flex flex-col items-center justify-center rounded-lg bg-slate-100 p-4 text-slate-950 shadow-md"
+              title={technology.name}
             >
               <Image
                 width={32}
                 height={32}
                 src={technology.icon}
                 alt={`${technology.name} Icon`}
-                title={technology.name}
               />
               <h5 className="font-serif">{technology.name}</h5>
             </div>
