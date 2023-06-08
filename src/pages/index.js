@@ -8,7 +8,7 @@ import SocialLinks from "@/components/SocialLinks";
 export default function Home() {
   return (
     <>
-      <div className=" mx-auto min-h-screen">
+      <div className="mx-auto min-h-screen">
         <Header />
         <main className="grid  grid-cols-6 grid-rows-3">
           <div className="col-span-5 col-start-2 row-start-2  md:row-start-2">
