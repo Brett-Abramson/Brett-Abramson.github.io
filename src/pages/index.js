@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
@@ -23,6 +24,9 @@ export default function Home() {
       </section>
       <section className="xl:container mx-auto">
         <Skills />
+      </section>
+      <section className="">
+        <Footer />
       </section>
     </>
   );
