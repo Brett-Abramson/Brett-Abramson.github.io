@@ -62,7 +62,7 @@ const Skills = () => {
 
   return (
     <div
-      className="rounded text-slate-100 md:container md:my-12 md:min-h-screen md:bg-zinc-800 md:py-8 lg:pb-20"
+      className="rounded text-slate-100 md:container md:mx-auto md:my-12 md:min-h-screen md:bg-zinc-800 md:py-8 lg:pb-20"
       id="skills"
     >
       <h2 className="my-8 text-center text-3xl font-bold md:my-10 md:text-4xl lg:my-12">
