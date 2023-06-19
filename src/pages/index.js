@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import SocialLinks from "@/components/SocialLinks";
+import Tester from "@/components/Tester";
 
 export default function Home() {
   return (
@@ -27,6 +28,9 @@ export default function Home() {
       </section>
       <section className="">
         <Footer />
+      </section>
+      <section>
+        <Tester />
       </section>
     </>
   );
