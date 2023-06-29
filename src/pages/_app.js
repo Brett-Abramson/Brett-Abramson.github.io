@@ -7,6 +7,8 @@ import { useEffect } from "react";
 import * as ga from "../lib/ga"
 
 export default function App({ Component, pageProps }) {
+  console.log(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS)
+  
   const router = useRouter()
 
   useEffect(() => {
