@@ -7,10 +7,10 @@ import ReactGA from "react-ga4"
 //     })
 // }
 // log the pageview with URL and react-GA
-export const pageview = (url) => {
-    ReactGA.set({ page:url })
-    ReactGA.pageview(url)
-}
+// export const pageview = (url) => {
+//     ReactGA.set({ page:url })
+//     ReactGA.pageview(url)
+// }
 
 // log specific events w/o react-GA
 // export const event = ({ action, params }) => {
@@ -33,5 +33,5 @@ export const initGA = () => {
 
 //  Track initial page view
 export const logPageView = () => {
-    pageview(window.location.pathname)
+    ReactGA.pageview(window.location.pathname)
 }
