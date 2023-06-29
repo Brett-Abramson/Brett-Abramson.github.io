@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import ReactGA from "react-ga"
+import ReactGA from "react-ga4"
 
 import * as ga from "../lib/ga"
 
@@ -25,9 +25,11 @@ export default function App({ Component, pageProps }) {
   // }, [router.events])
 
   useEffect(() => {
-    ReactGA.initialize(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS)
-    const handleRouteChange = (url) => {
-      ReactGA.pageview(url)
+    ga.initGA()
+    ga.logPageView()
+
+    const handleRouteChange = () => {
+      ga.logPageView()
     }
     router.events.on("routeChangeComplete", handleRouteChange)
 
@@ -35,7 +37,7 @@ export default function App({ Component, pageProps }) {
       router.events.off("routerChangeComplete", handleRouteChange)
     }
   }, [router.events])
-  
+
   return (
     <>
       <Head>

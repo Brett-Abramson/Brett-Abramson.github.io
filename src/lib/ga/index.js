@@ -1,4 +1,4 @@
-import ReactGA from "react-ga"
+import ReactGA from "react-ga4"
 
 // log the pageview with URL w/o react-GA
 // export const pageview = (url) => {
@@ -8,6 +8,7 @@ import ReactGA from "react-ga"
 // }
 // log the pageview with URL and react-GA
 export const pageview = (url) => {
+    ReactGA.set({ page:url })
     ReactGA.pageview(url)
 }
 
@@ -23,4 +24,14 @@ export const event = ({ action, params }) => {
         action,
         ...params
     })
+}
+
+// Initialize Google Analytics
+export const initGA = () => {
+    ReactGA.initialize(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS)
+}
+
+//  Track initial page view
+export const logPageView = () => {
+    pageview(window.location.pathname)
 }
