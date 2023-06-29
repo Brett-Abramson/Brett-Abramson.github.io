@@ -1,37 +1,33 @@
-import ReactGA from "react-ga4"
+"use client";
 
-// log the pageview with URL w/o react-GA
-// export const pageview = (url) => {
-//     window.gtag("config", process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
-//         page_path: url,
-//     })
-// }
-// log the pageview with URL and react-GA
-// export const pageview = (url) => {
-//     ReactGA.set({ page:url })
-//     ReactGA.pageview(url)
-// }
+import Script from "next/script";
 
-// log specific events w/o react-GA
-// export const event = ({ action, params }) => {
-//     window.gtag("event", action, params)
-// }
-
-// log specific events w/ react-GA
-export const event = ({ action, params }) => {
-    ReactGA.event({
-        category: "Event", // Can update with other event categories
-        action,
-        ...params
-    })
-}
-
-// Initialize Google Analytics
-export const initGA = () => {
-    ReactGA.initialize(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS)
-}
-
-//  Track initial page view
-export const logPageView = () => {
-    ReactGA.pageview(window.location.pathname)
+export default function GoogleAnalytics({ GA_MEASUREMENT_ID }) {
+  return (
+    <>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+      />
+      <Script
+        id="google-analytics"
+        strategy="aterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+  
+            gtag("consent", "default", {
+                "analytics_storage: "denied"
+            });
+  
+            gtag("config", "${GA_MEASUREMENT_ID}", {
+                page_path: window.location.pathname,
+            });
+            `,
+        }}
+      />
+    </>
+  );
 }
