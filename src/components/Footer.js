@@ -1,6 +1,7 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -18,7 +19,7 @@ const Footer = () => {
           </a>
           <ul className="flex w-1/2 justify-around text-2xl">
             <li className="my-3 md:mx-0">
-              <a
+              <Link
                 href="https://www.linkedin.com/in/brettmabramson/"
                 target="_blank"
               >
@@ -26,15 +27,15 @@ const Footer = () => {
                   icon={faLinkedin}
                   className="hover:scale-110 hover:text-white"
                 />
-              </a>
+              </Link>
             </li>
             <li className="my-3 md:mx-0">
-              <a href="https://github.com/Brett-Abramson" target="_blank">
+              <Link href="https://github.com/Brett-Abramson" target="_blank">
                 <FontAwesomeIcon
                   icon={faGithub}
                   className="hover:scale-110 hover:text-white"
                 />
-              </a>
+              </Link>
             </li>
           </ul>
           <a

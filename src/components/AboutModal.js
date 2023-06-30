@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Button from "./Button";
 
 const AboutModal = (props) => {
@@ -36,25 +37,25 @@ const AboutModal = (props) => {
               <h4 className="my-2 text-right md:text-lg animate-pulse">Want to learn more?</h4>
               <ul className="my-4 flex justify-around">
                 <li className="hover:scale-105 hover:text-white hover:underline">
-                  <a
+                  <Link
                     href="https://www.linkedin.com/in/brettmabramson/"
                     target="_blank"
                   >
                     <Button buttonText={"LinkedIN"} />
-                  </a>
+                  </Link>
                 </li>
                 <li className="hover:scale-105 hover:text-white hover:underline">
-                  <a href="https://github.com/Brett-Abramson" target="_blank">
+                  <Link href="https://github.com/Brett-Abramson" target="_blank">
                     <Button buttonText={"github"} />
-                  </a>
+                  </Link>
                 </li>
                 <li className="hover:scale-105 hover:text-white hover:underline">
-                  <a
+                  <Link
                     href="https://docs.google.com/document/d/1mIJZNi9hhq4iV6RIKMfDjweFYtqGjTKJPsDaFCwXAkQ/edit#heading=h.gjdgxs"
                     target="_blank"
                   >
                     <Button buttonText={"Resume"} />
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
