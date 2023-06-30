@@ -1,6 +1,6 @@
 import MobileMenu from "./MobileMenu";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <nav className="min-w-full">
       <div>
@@ -24,6 +24,7 @@ const Header = () => {
           <a
             href="#aboutMe"
             className="mx-4 text-zinc-300 hover:text-white hover:underline lg:mx-6 lg:text-3xl"
+            onClick={props.toggleModal}
           >
             Contact
           </a>

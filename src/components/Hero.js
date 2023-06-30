@@ -1,12 +1,12 @@
 import { useState } from "react";
 import AboutModal from "./AboutModal";
 
-const Hero = () => {
-  const [openModal, setOpenModal] = useState(false)
+const Hero = (props) => {
+  // const [openModal, setOpenModal] = useState(false)
 
-  const toggleModal = () => {
-    setOpenModal(!openModal)
-  }
+  // const toggleModal = () => {
+  //   setOpenModal(!openModal)
+  // }
 
   return (
     <>
@@ -17,11 +17,11 @@ const Hero = () => {
         <h3 className="pb-4 pt-1 font-serif text-xl text-zinc-400 lg:text-2xl xl:text-3xl">
           Software Developer
         </h3>
-        <button className="w-fit rounded bg-gradient-to-r from-indigo-900 via-indigo-700 to-indigo-500 px-4 py-2 font-bold text-slate-50 hover:scale-110 md:text-base xl:text-xl" onClick={toggleModal}>
+        <button className="w-fit rounded bg-gradient-to-r from-indigo-900 via-indigo-700 to-indigo-500 px-4 py-2 font-bold text-slate-50 hover:scale-110 md:text-base xl:text-xl" onClick={props.toggleModal}>
           About Me
         </button>
       </div>
-      {openModal && <AboutModal toggleModal={toggleModal}/>}
+      {props.openModal && <AboutModal toggleModal={props.toggleModal}/>}
     </>
   );
 };
