@@ -2,12 +2,17 @@ import MobileMenuButton from "./MobileMenuButton";
 import { useState } from "react";
 import SocialLinks from "./SocialLinks";
 
-const MobileMenu = () => {
+const MobileMenu = (props) => {
   const [showMobile, setShowMobile] = useState(false);
 
   const displayMenu = () => {
     setShowMobile(!showMobile);
   };
+
+  const handleContactClick = () => {
+    setShowMobile(!showMobile)
+    props.toggleModal()
+  }
   return (
     <>
       <MobileMenuButton displayMenu={displayMenu} />
@@ -36,7 +41,7 @@ const MobileMenu = () => {
               <a href="#skills" onClick={() => displayMenu()}>Tools</a>
             </li>
             <li className="py-6 text-4xl font-bold text-slate-50 hover:text-5xl hover:underline">
-              <a href="#" onClick={() => displayMenu()}>Contact</a>
+              <a href="#" onClick={() => handleContactClick()}>Contact</a>
             </li>
           </ul>
         </div>

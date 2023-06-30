@@ -5,7 +5,7 @@ const Header = (props) => {
     <nav className="min-w-full">
       <div>
         {/* <DropDown /> */}
-        <MobileMenu />
+        <MobileMenu toggleModal={props.toggleModal}/>
       </div>
       <div className="mr-6 flex justify-end">
         <div className="hidden md:flex">
