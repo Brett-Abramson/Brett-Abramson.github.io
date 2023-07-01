@@ -34,7 +34,7 @@ export default function CookieBanner() {
       className={`fixed bottom-0 left-0 right-0 mx-auto my-10 ${cookieConsent != null ? "flex" : "flex"} max-w-max flex-col items-center justify-between gap-4 rounded-lg bg-slate-800 px-3 py-3 shadow sm:flex-row md:max-w-screen-sm md:px-4`}
     >
       <div className="text-center text-slate-50">
-        <Link href="/info/cookies">
+        <Link href="#">
           <p>
             There's a <span className="font-bold text-sky-400">cookie</span> on
             this site.
