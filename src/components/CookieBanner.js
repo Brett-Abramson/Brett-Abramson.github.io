@@ -36,7 +36,7 @@ export default function CookieBanner() {
       <div className="text-center text-slate-50">
         <Link href="#">
           <p>
-            There's a <span className="font-bold text-sky-400">cookie</span> on
+            There&apos;s a <span className="font-bold text-sky-400">cookie</span> on
             this site.
           </p>
         </Link>
