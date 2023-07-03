@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }) {
         <Component {...pageProps} />
       </Layout>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
-      <Script
+      {/* <Script
         async
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }) {
             });
             `,
         }}
-      />
+      /> */}
     </>
   );
 }
