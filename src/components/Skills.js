@@ -86,24 +86,25 @@ const Skills = () => {
       <div className="mx-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mx-12 md:grid-cols-4 md:gap-5 lg:mx-16 lg:grid-cols-5 lg:gap-6 xl:gap-8">
         {technologies.map((technology, index) => {
           return (
-            <Link href={technology.url} target="_blank" rel="noreferrer">
-              <div
-                key={index}
-                className="flex flex-col items-center justify-center rounded-lg bg-slate-100 p-4 text-slate-950 shadow-md xl:py-7"
-                title={technology.name}
-              >
-                <Image
-                  width={32}
-                  height={32}
-                  src={technology.icon}
-                  alt={`${technology.name} Icon`}
-                  className="lg:w-10 xl:w-12 "
-                />
-                <h5 className="mt-2 font-serif xl:text-lg">
-                  {technology.name}
-                </h5>
-              </div>
-            </Link>
+            <div key={"Skills" + index}>
+              <Link href={technology.url} target="_blank" rel="noreferrer">
+                <div
+                  className="flex flex-col items-center justify-center rounded-lg bg-slate-100 p-4 text-slate-950 shadow-md xl:py-7"
+                  title={technology.name}
+                >
+                  <Image
+                    width={32}
+                    height={32}
+                    src={technology.icon}
+                    alt={`${technology.name} Icon`}
+                    className="lg:w-10 xl:w-12 "
+                  />
+                  <h5 className="mt-2 font-serif xl:text-lg">
+                    {technology.name}
+                  </h5>
+                </div>
+              </Link>
+            </div>
           );
         })}
       </div>
