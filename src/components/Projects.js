@@ -5,9 +5,11 @@ import LANBuddyImage from "../../public/static/images/LANBuddy.png";
 import LANBuddyGIF from "../../public/static/images/LANBuddyGIF.gif";
 import LostInTheWoodsImage from "../../public/static/images/LostInTheWoods.png";
 import LostInTheWoodsGIF from "../../public/static/images/LostInTheWoods.png";
+import TOPUserImage from "../../public/static/images/TOPReporting.png";
+import TOPPartnersImage from "../../public/static/images/TOPPartners.png";
 import AmazonS3 from "../../public/static/icons/AmazonS3.svg";
 import AmazonRDS from "../../public/static/icons/AmazonRDS.svg";
-import Knex from "../../public/static/icons/Knex.svg"
+import Knex from "../../public/static/icons/Knex.svg";
 import { useState } from "react";
 import ProjectModal from "./ProjectModal";
 
@@ -23,16 +25,28 @@ const Projects = () => {
   const projects = [
     {
       name: "Make My Test Count",
-      description: "A multi-faceted website that allows: \n Users to report their at-home COVID test result. \n Users to view COVID testing results by zipcode. \n Partners the ability to apply for a custom white-label website or modal plug-in.",
+      description: (
+        <div>
+          <p>A Multi-faceted website allowing:</p>
+          <ul>
+            <li>Users to report their at-home COVID test result.</li>
+            <li>Users to view COVID testing results by zipcode.</li>
+            <li>
+              Partners the ability to apply for a custom white-label website or
+              modal plug-in.
+            </li>
+          </ul>
+        </div>
+      ),
       hostedLink: "https://top-frontend-smoky.vercel.app/",
       gitHubFrontend: "https://github.com/Brett-Abramson/TOP_frontend",
       gitHubBackend: "https://github.com/Brett-Abramson/TOP_backend",
-      image: "",
+      image: TOPUserImage,
       gif: "",
       techStack: [
         {
           name: "React",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
         },
         {
           name: "PostGreSQL",
@@ -40,23 +54,23 @@ const Projects = () => {
         },
         {
           name: "Amazon S3",
-          icon: AmazonS3
+          icon: AmazonS3,
         },
         {
           name: "AmazonRDS",
-          icon: AmazonRDS
+          icon: AmazonRDS,
         },
         {
           name: "Knex",
-          icon: Knex
+          icon: Knex,
         },
         {
           name: "Chart.js",
-          icon: "https://asset.brandfetch.io/idFdo8ulhr/idg4l58CuH.svg"
+          icon: "https://asset.brandfetch.io/idFdo8ulhr/idg4l58CuH.svg",
         },
         {
           name: "Bootstrap",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
         },
         {
           name: "Javascript",
@@ -70,7 +84,7 @@ const Projects = () => {
           name: "CSS",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
         },
-      ]
+      ],
     },
     {
       name: "Vinyl Vault",
