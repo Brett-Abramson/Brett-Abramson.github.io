@@ -64,7 +64,7 @@ const Skills = () => {
     {
       name: "Knex",
       icon: Knex,
-      url: "https://knexjs.org/"
+      url: "https://knexjs.org/",
     },
     {
       name: "PostGreSQL",
@@ -74,7 +74,7 @@ const Skills = () => {
     {
       name: "AmazonRDS",
       icon: AmazonRDS,
-      url: "https://aws.amazon.com/rds/"
+      url: "https://aws.amazon.com/rds/",
     },
     {
       name: "Express",
@@ -89,13 +89,13 @@ const Skills = () => {
     {
       name: "Chart.js",
       icon: "https://asset.brandfetch.io/idFdo8ulhr/idg4l58CuH.svg",
-      url: "https://www.chartjs.org/"
+      url: "https://www.chartjs.org/",
     },
     {
       name: "Amazon S3",
       icon: AmazonS3,
-      url: "https://aws.amazon.com/s3/"
-    }
+      url: "https://aws.amazon.com/s3/",
+    },
   ];
 
   return (
@@ -112,7 +112,7 @@ const Skills = () => {
             <div key={"Skills" + index}>
               <Link href={technology.url} target="_blank" rel="noreferrer">
                 <div
-                  className="flex flex-col items-center justify-center rounded-lg bg-slate-100 p-4 text-slate-950 shadow-md xl:py-7"
+                  className="flex flex-col items-center justify-center rounded-lg bg-slate-100 hover:scale-105 p-4 text-slate-950 shadow-md xl:py-7"
                   title={technology.name}
                 >
                   <Image
