@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import AmazonS3 from "../../public/static/icons/AmazonS3.svg";
+import AmazonRDS from "../../public/static/icons/AmazonRDS.svg";
+import Knex from "../../public/static/icons/Knex.svg";
 
 const Skills = () => {
   const technologies = [
@@ -59,9 +62,19 @@ const Skills = () => {
       url: "https://www.mongodb.com/",
     },
     {
+      name: "Knex",
+      icon: Knex,
+      url: "https://knexjs.org/"
+    },
+    {
       name: "PostGreSQL",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
       url: "https://www.postgresql.org",
+    },
+    {
+      name: "AmazonRDS",
+      icon: AmazonRDS,
+      url: "https://aws.amazon.com/rds/"
     },
     {
       name: "Express",
@@ -73,6 +86,16 @@ const Skills = () => {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       url: "https://nodejs.org",
     },
+    {
+      name: "Chart.js",
+      icon: "https://asset.brandfetch.io/idFdo8ulhr/idg4l58CuH.svg",
+      url: "https://www.chartjs.org/"
+    },
+    {
+      name: "Amazon S3",
+      icon: AmazonS3,
+      url: "https://aws.amazon.com/s3/"
+    }
   ];
 
   return (
