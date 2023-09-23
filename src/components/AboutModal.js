@@ -28,7 +28,7 @@ const AboutModal = (props) => {
               of crafting code that harmonizes seamlessly with project goals. As
               well as a coder, I am also an avid brewer and musician. What truly
               fascinates me is the common thread running through these passions.
-              Whether it's evoking emotions through music, creating delectable
+              Whether it&apos;s evoking emotions through music, creating delectable
               libations through brewing, or designing intuitive and efficient
               applications, they all thrive on distinct and intricate processes,
               each demanding nuanced approaches to acheive excellence.
@@ -44,12 +44,12 @@ const AboutModal = (props) => {
                 mountains, and the proximity to the ocean. However, life had
                 other plans; car troubles and financial constraints meant I was
                 grounded in Austin for a while. As time went on, my North
-                Carolina dream faded, and I found happiness in Austin's vibrant
+                Carolina dream faded, and I found happiness in Austin&apos;s vibrant
                 atmosphere.
               </p>
               <p className="mx-4 pb-4 text-sm">
                 Before embarking on this journey, I gained valuable experience
-                working in a family restaurant on Fisherman's Wharf. There, I
+                working in a family restaurant on Fisherman&apos;s Wharf. There, I
                 played a pivotal role in modernizing the computer systems by
                 installing and configuring new POS software. My passion for
                 tinkering with computer systems was a constant in my life, and
@@ -57,7 +57,7 @@ const AboutModal = (props) => {
                 friends and family. After completing my degree in Liberal
                 Studies with a focus on Multi-disciplinary Ethnic Studies at San
                 Francisco State University, I took some time to explore
-                different career paths. For the past eight years, I've been a
+                different career paths. For the past eight years, I&apos;ve been a
                 bartender at events and weddings in Austin, which allowed me to
                 pursue my other interests, such as playing in a band and brewing
                 beer. During the COVID pandemic, my enthusiasm for computers and
@@ -67,7 +67,7 @@ const AboutModal = (props) => {
                 camp.
                 <br />
                 <br />
-                When I'm not engrossed in keyboard activities, you'll likely
+                When I&apos;m not engrossed in keyboard activities, you&apos;ll likely
                 find me immersed in music, crafting homemade brews, or embracing
                 outdoor adventures.
               </p>
