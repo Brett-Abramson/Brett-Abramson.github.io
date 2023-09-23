@@ -25,19 +25,8 @@ const Projects = () => {
   const projects = [
     {
       name: "Make My Test Count",
-      description: (
-        <div>
-          <p>A Multi-faceted website allowing:</p>
-          <ul>
-            <li>Users to report their at-home COVID test result.</li>
-            <li>Users to view COVID testing results by zipcode.</li>
-            <li>
-              Partners the ability to apply for a custom white-label website or
-              modal plug-in.
-            </li>
-          </ul>
-        </div>
-      ),
+      description:
+        "A COVID Reporting, Data Visualization, and White-Label Customization App",
       hostedLink: "https://top-frontend-smoky.vercel.app/",
       gitHubFrontend: "https://github.com/Brett-Abramson/TOP_frontend",
       gitHubBackend: "https://github.com/Brett-Abramson/TOP_backend",
@@ -88,7 +77,7 @@ const Projects = () => {
     },
     {
       name: "Vinyl Vault",
-      description: "An album companion and database App",
+      description: "An Album Companion and Database App",
       hostedLink:
         "https://vinyl-vault-frontend-git-main-brettmabramson-gmailcom.vercel.app/",
       gitHubFrontend: "https://github.com/Brett-Abramson/Vinyl-Vault-Frontend",
@@ -177,7 +166,7 @@ const Projects = () => {
     },
     {
       name: "Lost in the Woods",
-      description: "A community sourced hiking and camping companion app",
+      description: "A Community Sourced Hiking and Camping Companion App",
       hostedLink: "https://lost-in-the-woods.herokuapp.com/",
       gitHubFrontend: "https://github.com/Brett-Abramson/project_3_frontend",
       gitHubBackend: "https://github.com/Brett-Abramson/project_3_backend",
