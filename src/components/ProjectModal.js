@@ -56,20 +56,24 @@ const ProjectModal = (props) => {
             </div>
           </div>
           <div className="mx-4 rounded-sm border border-zinc-100">
-            <Image
+            {/* <Image
               src={props.project.gif}
               alt={`GIF of ${props.project.name} Landing Page`}
               fill
-              quality={100}
+              // quality={100}
               // sizes="50vw"
-              className="!static object-contain "
-            />
+              className="!static object-fill"
+              unoptimized
+            /> */}
+            <video  loop autoPlay>
+              <source src={props.project.gif} type="video/mp4" />
+            </video>
           </div>
 
           <div className="mx-2 pt-3">
             <p className="px-2">{props.project.details}</p>
           </div>
-          <div className="mx-4 my-2 flex flex-wrap justify-around rounded-xl bg-zinc-600 py-1 sm:py-3 sm:my-4">
+          <div className="mx-4 my-2 flex flex-wrap justify-around rounded-xl bg-zinc-600 py-1 sm:my-4 sm:py-3">
             {props.project.techStack.map((tech, index) => {
               return (
                 <Image
@@ -79,7 +83,7 @@ const ProjectModal = (props) => {
                   alt={`${tech.name} Icon`}
                   title={tech.name}
                   key={index}
-                  className="max-[380px]:h-6 max-[380px]:h-6"
+                  className="max-[380px]:h-6"
                 />
               );
             })}
