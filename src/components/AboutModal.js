@@ -34,7 +34,7 @@ const AboutModal = (props) => {
               each demanding nuanced approaches to acheive excellence.
             </p>
             <details>
-              <summary className="font-bold">Long Story</summary>
+              <summary className="font-bold cursor-pointer">Long Story</summary>
               <p className="mx-4 pb-4 pt-4 indent-6 text-sm">
                 Hello! Thank you for taking the time to get to know me better. I
                 grew up in the San Francisco Bay Area before an unexpected twist
