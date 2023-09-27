@@ -2,6 +2,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
+import VideoCarousel from "./VideoCarousel";
 
 const ProjectModal = (props) => {
   const handleModalClick = (event) => {
@@ -55,20 +56,15 @@ const ProjectModal = (props) => {
               </a>
             </div>
           </div>
-          <div className="mx-4 rounded-sm border border-zinc-100">
-            {/* <Image
-              src={props.project.gif}
-              alt={`GIF of ${props.project.name} Landing Page`}
-              fill
-              // quality={100}
-              // sizes="50vw"
-              className="!static object-fill"
-              unoptimized
-            /> */}
-            <video  loop autoPlay>
-              <source src={props.project.gif} type="video/mp4" />
-            </video>
-          </div>
+          {Array.isArray(props.project.gif) ? (
+            <VideoCarousel project={props.project} />
+          ) : (
+            <div className="mx-4 rounded-sm border border-zinc-100">
+              <video loop autoPlay>
+                <source src={props.project.gif} type="video/mp4" />
+              </video>
+            </div>
+          )}
 
           <div className="mx-2 pt-3">
             <p className="px-2">{props.project.details}</p>
