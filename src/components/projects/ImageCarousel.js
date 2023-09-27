@@ -1,4 +1,4 @@
-// This while have a carousel function and another function that iwll timely move through the carousel allowing for the option of either clicking through or interval autoswitchs thru.
+// Cycles through a project images at a rate of 5 seconds
 import { useEffect, useState } from "react";
 import Image from "next/image";
 

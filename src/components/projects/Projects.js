@@ -34,7 +34,16 @@ const Projects = () => {
       gitHubFrontend: "https://github.com/Brett-Abramson/TOP_frontend",
       gitHubBackend: "https://github.com/Brett-Abramson/TOP_backend",
       image: MMTCUserImage,
-      gif: MMTCUserGIF,
+      gif: [
+        {
+          name: "User",
+          video: MMTCUserGIF,
+        },
+        {
+          name: "Partner",
+          video: MMTCPartnerGIF,
+        },
+      ],
       techStack: [
         {
           name: "React",
