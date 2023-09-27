@@ -239,8 +239,6 @@ const Projects = () => {
                     <Image
                       src={project.image}
                       alt={`Image of ${project.name}'s Website`}
-                      // width={500}
-                      // height={500}
                       fill
                       sizes="75vw"
                       className="!static object-contain"
