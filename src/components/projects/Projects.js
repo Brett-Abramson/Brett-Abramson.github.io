@@ -7,13 +7,14 @@ import LostInTheWoodsImage from "../../../public/static/images/LostInTheWoods.pn
 import LostInTheWoodsGIF from "../../../public/static/videos/LostInTheWoodsGIF.mp4";
 import MMTCUserImage from "../../../public/static/images/TOPReporting.png";
 import MMTCPartnersImage from "../../../public/static/images/TOPPartners.png";
-import MMTCUserGIF from "../../../public/static/videos/MMTCUserGIF.mp4"
-import MMTCPartnerGIF from "../../../public/static/videos/MMTCPartnerGIF.mp4"
+import MMTCUserGIF from "../../../public/static/videos/MMTCUserGIF.mp4";
+import MMTCPartnerGIF from "../../../public/static/videos/MMTCPartnerGIF.mp4";
 import AmazonS3 from "../../../public/static/icons/AmazonS3.svg";
 import AmazonRDS from "../../../public/static/icons/AmazonRDS.svg";
 import Knex from "../../../public/static/icons/Knex.svg";
 import { useState } from "react";
 import ProjectModal from "./ProjectModal";
+import ImageCarousel from "./ImageCarousel";
 
 const Projects = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -23,7 +24,7 @@ const Projects = () => {
     setOpenModal(!openModal);
     setModalData(data);
   };
- 
+
   const projects = [
     {
       name: "Make My Test Count",
@@ -32,7 +33,7 @@ const Projects = () => {
       hostedLink: "https://top-frontend-smoky.vercel.app/",
       gitHubFrontend: "https://github.com/Brett-Abramson/TOP_frontend",
       gitHubBackend: "https://github.com/Brett-Abramson/TOP_backend",
-      image: MMTCUserImage,
+      image: [MMTCUserImage, MMTCPartnersImage],
       gif: MMTCUserGIF,
       techStack: [
         {
@@ -76,7 +77,7 @@ const Projects = () => {
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
         },
       ],
-      details: ""
+      details: "",
     },
     {
       name: "Vinyl Vault",
@@ -234,16 +235,18 @@ const Projects = () => {
                     onClick={() => {
                       toggleModal(project);
                     }}
-                  >
+                  >{ !Array.isArray(project.image) ? 
                     <Image
                       src={project.image}
-                      alt={`Image of ${project.name} Landing Page`}
+                      alt={`Image of ${project.name}'s Website`}
                       // width={500}
                       // height={500}
                       fill
-                      // sizes="75vw"
+                      sizes="75vw"
                       className="!static object-contain"
-                    />
+                    /> :
+                    <ImageCarousel media={project} /> // function that moves through image carousel goes here
+                    }
                   </div>
                   <div
                     className={`py-0.5 md:py-0 lg:px-5 xl:px-10 ${
