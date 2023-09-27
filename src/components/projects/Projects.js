@@ -33,7 +33,7 @@ const Projects = () => {
       hostedLink: "https://top-frontend-smoky.vercel.app/",
       gitHubFrontend: "https://github.com/Brett-Abramson/TOP_frontend",
       gitHubBackend: "https://github.com/Brett-Abramson/TOP_backend",
-      image: [MMTCUserImage, MMTCPartnersImage],
+      image: MMTCUserImage,
       gif: MMTCUserGIF,
       techStack: [
         {
@@ -235,16 +235,27 @@ const Projects = () => {
                     onClick={() => {
                       toggleModal(project);
                     }}
-                  >{ !Array.isArray(project.image) ? 
+                  >
+                    {/* {
+                      !Array.isArray(project.image) ? (
+                        <Image
+                          src={project.image}
+                          alt={`Image of ${project.name}'s Website`}
+                          fill
+                          sizes="75vw"
+                          className="!static object-contain"
+                        />
+                      ) : (
+                        <ImageCarousel media={project} />
+                      ) // function that moves through image carousel goes here
+                    } */}
                     <Image
                       src={project.image}
                       alt={`Image of ${project.name}'s Website`}
                       fill
                       sizes="75vw"
                       className="!static object-contain"
-                    /> :
-                    <ImageCarousel media={project} /> // function that moves through image carousel goes here
-                    }
+                    />
                   </div>
                   <div
                     className={`py-0.5 md:py-0 lg:px-5 xl:px-10 ${
