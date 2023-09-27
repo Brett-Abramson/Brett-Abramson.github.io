@@ -74,6 +74,7 @@ const Projects = () => {
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
         },
       ],
+      details: ""
     },
     {
       name: "Vinyl Vault",
@@ -119,7 +120,7 @@ const Projects = () => {
         },
       ],
       details:
-        "Vinyl Vault is a personal album database management application. It combines the power of Next.js for the frontend and Django REST Framework fpr the backend API. By seemlessly integrating Spotify's API, it automates data retrieval, reducing manual input and enhancing usability. The application's intuitive interface is styled with Tailwind CSS, providing a user-friendly experience.",
+        "Vinyl Vault is a personal album database management application. It combines the power of Next.js for the frontend and Django REST Framework for the backend API. By seemlessly integrating Spotify's API, it automates data retrieval, reducing manual input and enhancing usability. The application's intuitive interface is styled with Tailwind CSS, providing a user-friendly experience.",
     },
     {
       name: "LANBuddy",
