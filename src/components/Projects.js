@@ -5,8 +5,10 @@ import LANBuddyImage from "../../public/static/images/LANBuddy.png";
 import LANBuddyGIF from "../../public/static/videos/LANBuddyGIF.mp4";
 import LostInTheWoodsImage from "../../public/static/images/LostInTheWoods.png";
 import LostInTheWoodsGIF from "../../public/static/videos/LostInTheWoodsGIF.mp4";
-import TOPUserImage from "../../public/static/images/TOPReporting.png";
-import TOPPartnersImage from "../../public/static/images/TOPPartners.png";
+import MMTCUserImage from "../../public/static/images/TOPReporting.png";
+import MMTCPartnersImage from "../../public/static/images/TOPPartners.png";
+import MMTCUserGIF from "../../public/static/videos/MMTCUserGIF.mp4"
+import MMTCPartnerGIF from "../../public/static/videos/MMTCPartnerGIF.mp4"
 import AmazonS3 from "../../public/static/icons/AmazonS3.svg";
 import AmazonRDS from "../../public/static/icons/AmazonRDS.svg";
 import Knex from "../../public/static/icons/Knex.svg";
@@ -21,7 +23,7 @@ const Projects = () => {
     setOpenModal(!openModal);
     setModalData(data);
   };
-
+ 
   const projects = [
     {
       name: "Make My Test Count",
@@ -30,8 +32,8 @@ const Projects = () => {
       hostedLink: "https://top-frontend-smoky.vercel.app/",
       gitHubFrontend: "https://github.com/Brett-Abramson/TOP_frontend",
       gitHubBackend: "https://github.com/Brett-Abramson/TOP_backend",
-      image: TOPUserImage,
-      gif: "",
+      image: MMTCUserImage,
+      gif: MMTCUserGIF,
       techStack: [
         {
           name: "React",
