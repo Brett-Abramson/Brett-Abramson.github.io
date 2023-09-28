@@ -8,9 +8,9 @@ const VideoCarousel = (props) => {
     setIndex(newIndex);
   };
 
-  useEffect(()=>{
-    console.log(`Changing video to: ${videos[index].name}`)
-  }, [index, videos])
+  useEffect(() => {
+    console.log(`Changing video to: ${videos[index].name}`);
+  }, [index, videos]);
   return (
     <div className="mt-2">
       <div className="flex justify-around px-2">
