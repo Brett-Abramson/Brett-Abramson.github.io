@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const VideoCarousel = (props) => {
   const [index, setIndex] = useState(0);
@@ -8,20 +8,21 @@ const VideoCarousel = (props) => {
     setIndex(newIndex);
   };
 
-  // useEffect(() => {
-  //   console.log(`Changing video to: ${videos[index].name}`);
-  // }, [index, videos]);
   return (
     <div className="mt-2">
-      <div className="flex justify-evenly px-2">
+      <div className="mx-5 flex gap-px px-2">
         {videos.map((video, i) => {
+          const isActive = i === index;
+          const buttonClasses = `rounded-lg rounded-b-none border border-b-0 border-zinc-950 px-1 text-slate-50 active:bg-zinc-600 ${
+            isActive ? "bg-zinc-500 " : "bg-zinc-700"
+          } `;
           return (
             <button
               key={i}
-              className="rounded-lg border border-zinc-950 px-1 text-slate-50"
+              className={buttonClasses}
               onClick={() => changeVideo(i)}
             >
-              {video.name}
+              <p className="text-xs sm:text-sm md:text-base">{video.name}</p>
             </button>
           );
         })}
