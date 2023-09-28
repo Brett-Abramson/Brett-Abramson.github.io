@@ -8,17 +8,17 @@ const VideoCarousel = (props) => {
     setIndex(newIndex);
   };
 
-  useEffect(() => {
-    console.log(`Changing video to: ${videos[index].name}`);
-  }, [index, videos]);
+  // useEffect(() => {
+  //   console.log(`Changing video to: ${videos[index].name}`);
+  // }, [index, videos]);
   return (
     <div className="mt-2">
-      <div className="flex justify-around px-2">
+      <div className="flex justify-evenly px-2">
         {videos.map((video, i) => {
           return (
             <button
               key={i}
-              className="rounded-lg border border-zinc-950 px-1"
+              className="rounded-lg border border-zinc-950 px-1 text-slate-50"
               onClick={() => changeVideo(i)}
             >
               {video.name}
