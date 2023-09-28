@@ -44,9 +44,10 @@ const ProjectModal = (props) => {
             {props.project.name}
           </h2>
           <div className="mx-4 mb-2 flex justify-around pt-4 sm:pt-1 sm:justify-evenly">
-            {projectLinks.map((links) => {
+            {projectLinks.map((links, index) => {
               return (
                 <IconLinks
+                  key={`Link${index}`}
                   label={links.label}
                   url={links.url}
                   icon={links.icon}
