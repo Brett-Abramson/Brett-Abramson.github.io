@@ -1,8 +1,8 @@
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import VideoCarousel from "./VideoCarousel";
+import IconLinks from "./IconLinks";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 const ProjectModal = (props) => {
   const handleModalClick = (event) => {
@@ -13,7 +13,7 @@ const ProjectModal = (props) => {
 
   const projectLinks = [
     {
-      label: "Backend Repository",
+      label: "Backend Repo",
       url: props.project.gitHubBackend,
       icon: faGithub,
     },
@@ -23,29 +23,12 @@ const ProjectModal = (props) => {
       icon: faLink,
     },
     {
-      label: "Frontend Repository",
+      label: "Frontend Repo",
       url: props.project.gitHubFrontend,
       icon: faGithub,
     },
   ];
 
-  const IconLinks = ({url, icon, label}) => {
-    return (
-      <div className="relative flex flex-col items-center">
-        <a
-          href={url}
-          target={"_blank"}
-          title={label}
-          className="flex flex-col-reverse"
-        >
-          <FontAwesomeIcon icon={icon} className="peer" />
-          <label for="icon" className="text-xs ">
-            {label}
-          </label>
-        </a>
-      </div>
-    );
-  };
 
   return (
     <div
@@ -61,11 +44,14 @@ const ProjectModal = (props) => {
             {props.project.name}
           </h2>
           <div className="mx-2 mb-1 flex justify-around pt-4 sm:justify-evenly">
-            
             {projectLinks.map((links) => {
               return (
-                <IconLinks label={links.label} url={links.url} icon={links.icon} />
-              )
+                <IconLinks
+                  label={links.label}
+                  url={links.url}
+                  icon={links.icon}
+                />
+              );
             })}
           </div>
           {Array.isArray(props.project.gif) ? (
@@ -103,47 +89,3 @@ const ProjectModal = (props) => {
 };
 
 export default ProjectModal;
-
-
-
-
-
-{/* <div className="relative flex flex-col items-center">
-              <a
-                href={props.project.gitHubBackend}
-                target={"_blank"}
-                title="Backend Repository"
-                className="flex flex-col-reverse"
-              >
-                <FontAwesomeIcon icon={faGithub} className="peer" />
-                <label for="icon" className="text-xs ">
-                  Backend
-                </label>
-              </a>
-            </div>
-            <div className="relative">
-              <a
-                href={props.project.hostedLink}
-                target={"_blank"}
-                className="flex flex-col-reverse"
-                title="Live Site"
-              >
-                <FontAwesomeIcon icon={faLink} />
-                <label for="icon" className="peer-hover: text-xs ">
-                  Live Site
-                </label>
-              </a>
-            </div>
-            <div className="relative">
-              <a
-                href={props.project.gitHubFrontend}
-                target={"_blank"}
-                title="Frontend Repository"
-                className="flex flex-col-reverse"
-              >
-                <FontAwesomeIcon icon={faGithub} />
-                <label for="icon" className="text-xs sm:hidden sm:opacity-0 ">
-                  Frontend
-                </label>
-              </a>
-            </div> */}
