@@ -43,7 +43,7 @@ const ProjectModal = (props) => {
           <h2 className="my-1 mb-2 text-center text-2xl font-bold underline sm:text-3xl">
             {props.project.name}
           </h2>
-          <div className="mx-2 mb-2 flex justify-around pt-4 sm:pt-1 sm:justify-evenly">
+          <div className="mx-4 mb-2 flex justify-around pt-4 sm:pt-1 sm:justify-evenly">
             {projectLinks.map((links) => {
               return (
                 <IconLinks
