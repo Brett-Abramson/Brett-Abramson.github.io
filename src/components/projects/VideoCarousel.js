@@ -12,8 +12,8 @@ const VideoCarousel = (props) => {
     console.log(`Changing video to: ${videos[index].name}`)
   }, [index, videos])
   return (
-    <div className="">
-      <div className="flex justify-around">
+    <div className="mt-2">
+      <div className="flex justify-around px-2">
         {videos.map((video, i) => {
           return (
             <button

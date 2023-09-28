@@ -10,6 +10,43 @@ const ProjectModal = (props) => {
       props.toggleModal(null);
     }
   };
+
+  const projectLinks = [
+    {
+      label: "Backend Repository",
+      url: props.project.gitHubBackend,
+      icon: faGithub,
+    },
+    {
+      label: "Live Site",
+      url: props.project.hostedLink,
+      icon: faLink,
+    },
+    {
+      label: "Frontend Repository",
+      url: props.project.gitHubFrontend,
+      icon: faGithub,
+    },
+  ];
+
+  const IconLinks = ({url, icon, label}) => {
+    return (
+      <div className="relative flex flex-col items-center">
+        <a
+          href={url}
+          target={"_blank"}
+          title={label}
+          className="flex flex-col-reverse"
+        >
+          <FontAwesomeIcon icon={icon} className="peer" />
+          <label for="icon" className="text-xs ">
+            {label}
+          </label>
+        </a>
+      </div>
+    );
+  };
+
   return (
     <div
       className="fixed left-0 top-0 z-10 h-full w-full overflow-auto bg-zinc-950 bg-opacity-95"
@@ -23,38 +60,13 @@ const ProjectModal = (props) => {
           <h2 className="my-1 mb-2 text-center text-2xl font-bold underline sm:text-3xl">
             {props.project.name}
           </h2>
-          <div className="mx-2 mb-1 flex justify-around sm:justify-evenly">
-            <div className="flex flex-col items-center">
-              <p className="text-xs sm:hidden">Frontend</p>
-              <a
-                href={props.project.gitHubFrontend}
-                target={"_blank"}
-                title="Frontend Repository"
-              >
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="text-xs sm:hidden">Live Site</p>
-              <a
-                href={props.project.hostedLink}
-                target={"_blank"}
-                className=""
-                title="Live Site"
-              >
-                <FontAwesomeIcon icon={faLink} />
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="text-xs sm:hidden">Backend</p>
-              <a
-                href={props.project.gitHubBackend}
-                target={"_blank"}
-                title="Backend Repository"
-              >
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-            </div>
+          <div className="mx-2 mb-1 flex justify-around pt-4 sm:justify-evenly">
+            
+            {projectLinks.map((links) => {
+              return (
+                <IconLinks label={links.label} url={links.url} icon={links.icon} />
+              )
+            })}
           </div>
           {Array.isArray(props.project.gif) ? (
             <VideoCarousel project={props.project} />
@@ -91,3 +103,47 @@ const ProjectModal = (props) => {
 };
 
 export default ProjectModal;
+
+
+
+
+
+{/* <div className="relative flex flex-col items-center">
+              <a
+                href={props.project.gitHubBackend}
+                target={"_blank"}
+                title="Backend Repository"
+                className="flex flex-col-reverse"
+              >
+                <FontAwesomeIcon icon={faGithub} className="peer" />
+                <label for="icon" className="text-xs ">
+                  Backend
+                </label>
+              </a>
+            </div>
+            <div className="relative">
+              <a
+                href={props.project.hostedLink}
+                target={"_blank"}
+                className="flex flex-col-reverse"
+                title="Live Site"
+              >
+                <FontAwesomeIcon icon={faLink} />
+                <label for="icon" className="peer-hover: text-xs ">
+                  Live Site
+                </label>
+              </a>
+            </div>
+            <div className="relative">
+              <a
+                href={props.project.gitHubFrontend}
+                target={"_blank"}
+                title="Frontend Repository"
+                className="flex flex-col-reverse"
+              >
+                <FontAwesomeIcon icon={faGithub} />
+                <label for="icon" className="text-xs sm:hidden sm:opacity-0 ">
+                  Frontend
+                </label>
+              </a>
+            </div> */}
