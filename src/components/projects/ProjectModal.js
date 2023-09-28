@@ -39,11 +39,11 @@ const ProjectModal = (props) => {
         className="z-20 mx-6 mt-[33%] h-full shadow-slate-400 sm:mt-20 md:shadow-md"
         onClick={handleModalClick}
       >
-        <div className="flex w-full flex-col justify-center rounded border-x border-y border-solid border-zinc-50 bg-zinc-800 text-slate-50 sm:m-auto sm:max-w-md md:max-w-lg lg:max-w-xl">
+        <div className="flex w-full flex-col justify-center rounded border-x border-y border-solid border-zinc-50 bg-zinc-800 text-slate-50 sm:m-auto sm:max-w-md md:max-w-lg lg:max-w-3xl">
           <h2 className="my-1 mb-2 text-center text-2xl font-bold underline sm:text-3xl">
             {props.project.name}
           </h2>
-          <div className="mx-2 mb-1 flex justify-around pt-4 sm:pt-1 sm:mb-2 sm:justify-evenly">
+          <div className="mx-2 mb-2 flex justify-around pt-4 sm:pt-1 sm:justify-evenly">
             {projectLinks.map((links) => {
               return (
                 <IconLinks
@@ -54,6 +54,7 @@ const ProjectModal = (props) => {
               );
             })}
           </div>
+          {/* multiple videos: displays tabs */}
           {Array.isArray(props.project.gif) ? (
             <VideoCarousel project={props.project} />
           ) : (
