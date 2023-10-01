@@ -33,7 +33,9 @@ const ContactForm = () => {
         type="text"
         id="name"
         name="name"
+        value={formData.name}
         required
+        className="text-zinc-950"
         onChange={handleChange}
       />
 
@@ -42,12 +44,22 @@ const ContactForm = () => {
         type="text"
         id="email"
         name="email"
+        value={formData.email}
         required
+        className="text-zinc-950"
         onChange={handleChange}
       />
 
       <label htmlFor="message">Message:</label>
-      <textarea id="message" name="message" required onChange={handleChange} />
+      <textarea
+        id="message"
+        name="message"
+        value={formData.message}
+        required
+        className="text-zinc-950"
+        onChange={handleChange}
+      />
+      <button type="submit">Send</button>
     </form>
   );
 };
