@@ -12,8 +12,8 @@ export default async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
-        user: "", // need to create a new gmail account
-        pass: "",
+        user: portfolioEmail, 
+        pass: portfolioPassword,
       },
     });
 
