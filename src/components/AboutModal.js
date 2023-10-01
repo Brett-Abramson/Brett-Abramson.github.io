@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Button from "./Button";
+import ContactForm from "./ContactForm";
 
 const AboutModal = (props) => {
   const handleModalClick = (event) => {
@@ -78,6 +79,7 @@ const AboutModal = (props) => {
               <h4 className="my-2 mr-8 animate-pulse text-right md:text-lg">
                 Connect!
               </h4>
+              <ContactForm />
               <ul className="my-4 flex justify-between lg:my-8 lg:justify-around">
                 <li className="hover:scale-105 hover:text-white hover:underline">
                   <Link

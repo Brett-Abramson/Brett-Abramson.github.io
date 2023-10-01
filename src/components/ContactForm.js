@@ -1,0 +1,75 @@
+import { useState } from "react";
+import Button from "./Button";
+
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const response = await fetch("./api/sendEmail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await response.json();
+    console.log(data.message);
+  };
+
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
+
+  return (
+    <div className="border border-slate-500 rounded-xl p-2">
+      <h3 className="">
+        If you would like to get in touch, please feel free to send me a
+        message. If you leave your name, email, and a brief message, I will get
+        back to you as soon as I can.
+      </h3>
+      <form onSubmit={handleSubmit} className="flex flex-col">
+        <label htmlFor="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={formData.name}
+          required
+          className="text-zinc-950 rounded"
+          onChange={handleChange}
+        />
+
+        <label htmlFor="Email">Email:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          value={formData.email}
+          required
+          className="text-zinc-950 rounded"
+          onChange={handleChange}
+        />
+
+        <label htmlFor="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          required
+          className="text-zinc-950 rounded"
+          onChange={handleChange}
+        />
+        <Button type="submit" buttonText="Send" customClassname="w-1/3 m-auto border border-zinc-50 hover:scale-105" />
+      </form>
+    </div>
+  );
+};
+
+export default ContactForm;
