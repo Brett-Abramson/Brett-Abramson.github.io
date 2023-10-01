@@ -26,9 +26,11 @@ const ContactForm = () => {
     if (response.ok) {
       const data = await response.json();
       console.log(data.message);
-      setIsEmailSent(true);
 
+      setIsEmailSent(true);
+      setIsLoading(false)
       resetFormData();
+
     } else {
       console.error("Error sending email");
     }
