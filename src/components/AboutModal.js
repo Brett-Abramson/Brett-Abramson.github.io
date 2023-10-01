@@ -19,10 +19,33 @@ const AboutModal = (props) => {
         className="z-20 mx-4 mt-[33%] h-full shadow-slate-400 sm:mt-20 md:shadow-md"
         onClick={handleModalClick}
       >
-        <div className="flex w-full flex-col justify-center rounded border-x border-y border-solid border-zinc-50 bg-zinc-800 text-slate-50 sm:m-auto sm:max-w-xs md:max-w-lg lg:max-w-3xl">
+        <div className="flex w-full flex-col justify-center rounded border-x border-y border-solid border-zinc-50 bg-zinc-800 text-slate-50 sm:m-auto sm:max-w-xs md:max-w-lg lg:max-w-3xl lg:pb-4">
           <div className="mx-5">
             <h2 className="mt-8 text-2xl">About Me</h2>
             <div className="mb-4 w-2/3 bg-indigo-700 py-1 sm:w-1/2" />
+            <ul className="my-4 flex justify-between md:justify-around lg:my-8">
+              <li className="hover:scale-105 hover:text-white hover:underline">
+                <Link
+                  href="https://www.linkedin.com/in/brettmabramson/"
+                  target="_blank"
+                >
+                  <Button buttonText={"LinkedIN"} />
+                </Link>
+              </li>
+              <li className="hover:scale-105 hover:text-white hover:underline">
+                <Link href="https://github.com/Brett-Abramson" target="_blank">
+                  <Button buttonText={"github"} />
+                </Link>
+              </li>
+              <li className="hover:scale-105 hover:text-white hover:underline">
+                <Link
+                  href="https://docs.google.com/document/d/1mIJZNi9hhq4iV6RIKMfDjweFYtqGjTKJPsDaFCwXAkQ/edit#heading=h.gjdgxs"
+                  target="_blank"
+                >
+                  <Button buttonText={"Resume"} />
+                </Link>
+              </li>
+            </ul>
             <h4 className="font-bold">Short Story:</h4>
             <p className="mx-4 pb-4 indent-4">
               I am a software developer based in Austin, Texas driven by the art
@@ -76,36 +99,10 @@ const AboutModal = (props) => {
             </details>
 
             <div>
-              <h4 className="my-2 mr-8 animate-pulse text-right md:text-lg">
+              <h4 className="my-4 mr-8 md:mr-12 lg:mr-16 animate-pulse text-right md:text-lg">
                 Connect!
               </h4>
               <ContactForm />
-              <ul className="my-4 flex justify-between lg:my-8 lg:justify-around">
-                <li className="hover:scale-105 hover:text-white hover:underline">
-                  <Link
-                    href="https://www.linkedin.com/in/brettmabramson/"
-                    target="_blank"
-                  >
-                    <Button buttonText={"LinkedIN"} />
-                  </Link>
-                </li>
-                <li className="hover:scale-105 hover:text-white hover:underline">
-                  <Link
-                    href="https://github.com/Brett-Abramson"
-                    target="_blank"
-                  >
-                    <Button buttonText={"github"} />
-                  </Link>
-                </li>
-                <li className="hover:scale-105 hover:text-white hover:underline">
-                  <Link
-                    href="https://docs.google.com/document/d/1mIJZNi9hhq4iV6RIKMfDjweFYtqGjTKJPsDaFCwXAkQ/edit#heading=h.gjdgxs"
-                    target="_blank"
-                  >
-                    <Button buttonText={"Resume"} />
-                  </Link>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
