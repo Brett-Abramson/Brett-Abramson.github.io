@@ -8,9 +8,12 @@ const ContactForm = () => {
     message: "",
   });
   const [isEmailSent, setIsEmailSent] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    setIsLoading(true);
 
     const response = await fetch("./api/sendEmail", {
       method: "POST",
@@ -23,11 +26,11 @@ const ContactForm = () => {
     if (response.ok) {
       const data = await response.json();
       console.log(data.message);
-      setIsEmailSent(true)
+      setIsEmailSent(true);
 
       resetFormData();
     } else {
-      console.error("Error sending email")
+      console.error("Error sending email");
     }
   };
 
@@ -38,57 +41,70 @@ const ContactForm = () => {
   const resetFormData = () => {
     setFormData({
       name: "",
-      email:"",
-      message:"",
-    })
-  }
+      email: "",
+      message: "",
+    });
+  };
 
   return (
-    <div className="border border-slate-500 rounded-xl p-2 mb-4 lg:w-2/3 lg:m-auto lg:px-4">
+    <div className="mb-4 rounded-xl border border-slate-500 p-2 lg:m-auto lg:w-2/3 lg:px-4">
       {isEmailSent ? (
-        <><p>Email successfully Sent!</p>
-        <a href="3" onClick={() => setIsEmailSent(false)}>Send another message?</a></>
-
-         ) : (/* <h3 className="md:m-2">
+        <>
+          <p>Email successfully Sent!</p>
+          <a href="3" onClick={() => setIsEmailSent(false)}>
+            Send another message?
+          </a>
+        </>
+      ) : (
+        /* <h3 className="md:m-2">
         If you would like to get in touch, please feel free to send me a
         message.
-      </h3> */
-      <form onSubmit={handleSubmit} className="flex flex-col">
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          required
-          className="text-zinc-950 rounded"
-          onChange={handleChange}
-        />
+      </h3> */ <>
+          {isLoading ? (
+            <p>Sending... Please wait.</p> // lets use a spinner here
+          ) : (
+            <form onSubmit={handleSubmit} className="flex flex-col">
+              <label htmlFor="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                required
+                className="rounded text-zinc-950"
+                onChange={handleChange}
+              />
 
-        <label htmlFor="Email">Email:</label>
-        <input
-          type="text"
-          id="email"
-          name="email"
-          value={formData.email}
-          required
-          className="text-zinc-950 rounded"
-          onChange={handleChange}
-        />
+              <label htmlFor="Email">Email:</label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                value={formData.email}
+                required
+                className="rounded text-zinc-950"
+                onChange={handleChange}
+              />
 
-        <label htmlFor="message">Message:</label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          required
-          className="text-zinc-950 rounded"
-          onChange={handleChange}
-        />
-        <Button type="submit" buttonText="Send" customClassname="w-1/3 m-auto my-3 mt-4 border border-zinc-50 hover:scale-105" />
-      </form>)}
+              <label htmlFor="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                required
+                className="rounded text-zinc-950"
+                onChange={handleChange}
+              />
+              <Button
+                type="submit"
+                buttonText="Send"
+                customClassname="w-1/3 m-auto my-3 mt-4 border border-zinc-50 hover:scale-105"
+              />
+            </form>
+          )}
+        </>
+      )}
     </div>
-
   );
 };
 
