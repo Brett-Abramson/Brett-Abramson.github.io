@@ -28,12 +28,11 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="border border-slate-500 rounded-xl p-2">
-      <h3 className="">
+    <div className="border border-slate-500 rounded-xl p-2 mb-4 lg:w-2/3 lg:m-auto lg:px-4">
+      {/* <h3 className="md:m-2">
         If you would like to get in touch, please feel free to send me a
-        message. If you leave your name, email, and a brief message, I will get
-        back to you as soon as I can.
-      </h3>
+        message.
+      </h3> */}
       <form onSubmit={handleSubmit} className="flex flex-col">
         <label htmlFor="name">Name:</label>
         <input
@@ -66,7 +65,7 @@ const ContactForm = () => {
           className="text-zinc-950 rounded"
           onChange={handleChange}
         />
-        <Button type="submit" buttonText="Send" customClassname="w-1/3 m-auto border border-zinc-50 hover:scale-105" />
+        <Button type="submit" buttonText="Send" customClassname="w-1/3 m-auto my-3 mt-4 border border-zinc-50 hover:scale-105" />
       </form>
     </div>
   );
