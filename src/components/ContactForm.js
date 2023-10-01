@@ -19,13 +19,27 @@ const ContactForm = () => {
       body: JSON.stringify(formData),
     });
 
-    const data = await response.json();
-    console.log(data.message);
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data.message);
+
+      resetFormData();
+    } else {
+      console.error("Error sending email")
+    }
   };
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
+
+  const resetFormData = () => {
+    setFormData({
+      name: "",
+      email:"",
+      message:"",
+    })
+  }
 
   return (
     <div className="border border-slate-500 rounded-xl p-2 mb-4 lg:w-2/3 lg:m-auto lg:px-4">
