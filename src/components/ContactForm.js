@@ -49,17 +49,20 @@ const ContactForm = () => {
   return (
     <div className="mb-4 rounded-xl border border-slate-500 p-2 lg:m-auto lg:w-2/3 lg:px-4">
       {isEmailSent ? (
-        <>
+        <div className="flex flex-col items-center">
           <p>Email successfully Sent!</p>
-          <a href="3" onClick={() => setIsEmailSent(false)}>
+          <a
+            href="#"
+            onClick={() => {
+              setIsEmailSent(false);
+              setIsLoading(false);
+            }}
+          >
             Send another message?
           </a>
-        </>
+        </div>
       ) : (
-        /* <h3 className="md:m-2">
-        If you would like to get in touch, please feel free to send me a
-        message.
-      </h3> */ <>
+        <>
           {isLoading ? (
             <p>Sending... Please wait.</p> // lets use a spinner here
           ) : (
