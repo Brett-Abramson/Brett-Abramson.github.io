@@ -7,6 +7,7 @@ const ContactForm = () => {
     email: "",
     message: "",
   });
+  const [isEmailSent, setIsEmailSent] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -22,6 +23,7 @@ const ContactForm = () => {
     if (response.ok) {
       const data = await response.json();
       console.log(data.message);
+      setIsEmailSent(true)
 
       resetFormData();
     } else {
@@ -43,10 +45,14 @@ const ContactForm = () => {
 
   return (
     <div className="border border-slate-500 rounded-xl p-2 mb-4 lg:w-2/3 lg:m-auto lg:px-4">
-      {/* <h3 className="md:m-2">
+      {isEmailSent ? (
+        <><p>Email successfully Sent!</p>
+        <a href="3" onClick={() => setIsEmailSent(false)}>Send another message?</a></>
+
+         ) : (/* <h3 className="md:m-2">
         If you would like to get in touch, please feel free to send me a
         message.
-      </h3> */}
+      </h3> */
       <form onSubmit={handleSubmit} className="flex flex-col">
         <label htmlFor="name">Name:</label>
         <input
@@ -80,8 +86,9 @@ const ContactForm = () => {
           onChange={handleChange}
         />
         <Button type="submit" buttonText="Send" customClassname="w-1/3 m-auto my-3 mt-4 border border-zinc-50 hover:scale-105" />
-      </form>
+      </form>)}
     </div>
+
   );
 };
 
