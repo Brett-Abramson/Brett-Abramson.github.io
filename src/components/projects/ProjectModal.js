@@ -39,14 +39,15 @@ const ProjectModal = (props) => {
         onClick={handleModalClick}
       >
         <div className="relative flex w-full flex-col justify-center rounded border-x border-y border-solid border-zinc-50 bg-zinc-800 text-slate-50 sm:m-auto sm:max-w-md md:max-w-lg lg:max-w-3xl">
-          <div className="absolute right-2 top-2 cursor-pointer border bg-yellow-50 ">
-            <FontAwesomeIcon
-              icon={faTimes}
+          <div className="absolute right-1.5 top-1.5 flex w-6 cursor-pointer items-center justify-center rounded-full ">
+            <button
               label="Close"
               url="#"
               onClick={() => props.toggleModal(null)}
-              className="text-lg"
-            />
+              className="text-slate-50 font-bold opacity-85 md:text-lg"
+            >
+              X
+            </button>
           </div>
           <h2 className="my-1 mb-2 text-center text-2xl font-bold underline sm:text-3xl">
             {props.project.name}
