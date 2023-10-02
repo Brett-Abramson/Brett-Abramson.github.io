@@ -86,21 +86,19 @@ const ProjectModal = (props) => {
                 return (
                   <div
                     key={`icon: ${index}`}
-                    className="flex flex-col items-center justify-center relative"
+                    className="relative flex flex-col items-center justify-center"
                   >
                     <Image
                       width={32}
                       height={32}
                       src={tech.icon}
                       alt={`${tech.name} Icon`}
+                      aria-label={`${tech.name} icon`}
                       className="peer  max-[380px]:h-6"
                     />
-                    <label
-                      htmlFor="skillIcon"
-                      className="hidden text-sm sm:absolute sm:block sm:w-auto sm:-bottom-4 sm:opacity-0 sm:peer-hover:opacity-100 md:opacity-100 md:static"
-                    >
+                    <span className="hidden text-sm md:absolute md:-bottom-4 md:block md:w-auto md:opacity-0 md:peer-hover:opacity-100 lg:static lg:opacity-100">
                       {tech.name}
-                    </label>
+                    </span>
                   </div>
                 );
               }

@@ -221,7 +221,7 @@ const Projects = () => {
   return (
     <div className="h-full w-full bg-slate-100" id="projects">
       <div className="flex flex-col">
-        <div className="flex flex-col items-center py-5">
+        <div className="flex flex-col items-center py-5 lg:my-5">
           <h3 className="pt-2 font-serif text-2xl font-extralight text-slate-950">
             Projects
           </h3>
