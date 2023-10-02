@@ -16,7 +16,7 @@ const ContactForm = () => {
 
     setIsLoading(true);
 
-    const response = await fetch("./api/sendEmail", {
+    const response = await fetch("/api/sendEmail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
