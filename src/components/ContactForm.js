@@ -9,6 +9,7 @@ const ContactForm = () => {
   });
   const [isEmailSent, setIsEmailSent] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -28,11 +29,12 @@ const ContactForm = () => {
       console.log(data.message);
 
       setIsEmailSent(true);
-      setIsLoading(false)
+      setIsLoading(false);
       resetFormData();
-
     } else {
       console.error("Error sending email");
+      setIsLoading(false);
+      setIsError(true);
     }
   };
 
@@ -68,44 +70,62 @@ const ContactForm = () => {
           {isLoading ? (
             <p>Sending... Please wait.</p> // lets use a spinner here
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col">
-              <label htmlFor="name">Name:</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                required
-                className="rounded text-zinc-950"
-                onChange={handleChange}
-              />
+            <>
+              {isError ? (
+                <>
+                  {" "}
+                  <p>Error sending Email</p>
+                  <a
+                    href="#"
+                    onClick={() => {
+                      setIsEmailSent(false);
+                      setIsError(false);
+                    }}
+                  >
+                    Try again.
+                  </a>
+                </>
+              ) : (
+                <form onSubmit={handleSubmit} className="flex flex-col">
+                  <label htmlFor="name">Name:</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    required
+                    className="rounded text-zinc-950"
+                    onChange={handleChange}
+                  />
 
-              <label htmlFor="Email">Email:</label>
-              <input
-                type="text"
-                id="email"
-                name="email"
-                value={formData.email}
-                required
-                className="rounded text-zinc-950"
-                onChange={handleChange}
-              />
+                  <label htmlFor="Email">Email:</label>
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    required
+                    className="rounded text-zinc-950"
+                    onChange={handleChange}
+                  />
 
-              <label htmlFor="message">Message:</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                required
-                className="rounded text-zinc-950"
-                onChange={handleChange}
-              />
-              <Button
-                type="submit"
-                buttonText="Send"
-                customClassname="w-1/3 m-auto my-3 mt-4 border border-zinc-50 hover:scale-105"
-              />
-            </form>
+                  <label htmlFor="message">Message:</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    required
+                    className="rounded text-zinc-950"
+                    onChange={handleChange}
+                  />
+                  <Button
+                    type="submit"
+                    buttonText="Send"
+                    customClassname="w-1/3 m-auto my-3 mt-4 border border-zinc-50 hover:scale-105"
+                  />
+                </form>
+              )}
+            </>
           )}
         </>
       )}
