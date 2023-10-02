@@ -93,17 +93,19 @@ const ContactForm = () => {
                     name="name"
                     value={formData.name}
                     required
+                    autoComplete="name"
                     className="rounded text-zinc-950"
                     onChange={handleChange}
                   />
 
-                  <label htmlFor="Email">Email:</label>
+                  <label htmlFor="email">Email:</label>
                   <input
                     type="text"
                     id="email"
                     name="email"
                     value={formData.email}
                     required
+                    autoComplete="email"
                     className="rounded text-zinc-950"
                     onChange={handleChange}
                   />
