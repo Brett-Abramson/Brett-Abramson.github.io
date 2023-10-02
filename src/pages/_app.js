@@ -1,6 +1,7 @@
 import Layout from "@/context/Layout";
 import "@/styles/globals.css";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 
 export default function App({ Component, pageProps }) {
@@ -12,6 +13,7 @@ export default function App({ Component, pageProps }) {
 
       <Layout>
         <Component {...pageProps} />
+        <Analytics />
       </Layout>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       {/* <Script
