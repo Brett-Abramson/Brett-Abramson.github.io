@@ -78,7 +78,6 @@ const ContactForm = () => {
                   <a
                     href="#"
                     onClick={() => {
-                      setIsEmailSent(false);
                       setIsError(false);
                     }}
                   >
