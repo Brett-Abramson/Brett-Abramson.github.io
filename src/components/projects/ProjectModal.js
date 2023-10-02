@@ -44,7 +44,7 @@ const ProjectModal = (props) => {
               label="Close"
               url="#"
               onClick={() => props.toggleModal(null)}
-              className="text-slate-50 font-bold opacity-85 md:text-lg"
+              className="opacity-85 font-bold text-slate-50 md:text-lg"
             >
               X
             </button>
@@ -52,11 +52,11 @@ const ProjectModal = (props) => {
           <h2 className="my-1 mb-2 text-center text-2xl font-bold underline sm:text-3xl">
             {props.project.name}
           </h2>
-          <div className="mx-4 mb-2 flex justify-around pt-4 sm:justify-evenly sm:pt-1">
+          <div className="mx-auto mb-3 flex justify-around pt-4 sm:justify-evenly sm:pt-1">
             {projectLinks.map((links, index) => {
               return (
                 <IconLinks
-                  key={`Link${index}`}
+                  key={`Link: ${index}`}
                   label={links.label}
                   url={links.url}
                   icon={links.icon}
@@ -80,24 +80,24 @@ const ProjectModal = (props) => {
               {props.project.details}
             </p>
           </div>
-          <div className="mx-4 my-2 flex justify-around rounded bg-zinc-600 py-1 sm:my-4 sm:flex-wrap sm:rounded-xl sm:py-3">
+          <div className="mx-4 my-2 flex  justify-evenly rounded bg-zinc-600 py-1.5 sm:my-4 sm:rounded-xl sm:py-3 lg:flex-wrap">
             {props.project.techStack.map((tech, index) => {
               if (tech.name !== "HTML" && tech.name !== "CSS") {
                 return (
                   <div
                     key={`icon: ${index}`}
-                    className="flex flex-col items-center"
+                    className="flex flex-col items-center justify-center relative"
                   >
                     <Image
                       width={32}
                       height={32}
                       src={tech.icon}
                       alt={`${tech.name} Icon`}
-                      className="max-[380px]:h-6"
+                      className="peer  max-[380px]:h-6"
                     />
                     <label
                       htmlFor="skillIcon"
-                      className="hidden sm:block md:text-sm"
+                      className="hidden text-sm sm:absolute sm:block sm:w-auto sm:-bottom-4 sm:opacity-0 sm:peer-hover:opacity-100 md:opacity-100 md:static"
                     >
                       {tech.name}
                     </label>

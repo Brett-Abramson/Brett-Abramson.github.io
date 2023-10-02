@@ -54,7 +54,7 @@ const Projects = () => {
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
         },
         {
-          name: "Amazon S3",
+          name: "AmazonS3",
           icon: AmazonS3,
         },
         {
