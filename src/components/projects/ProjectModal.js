@@ -29,7 +29,6 @@ const ProjectModal = (props) => {
     },
   ];
 
-
   return (
     <div
       className="fixed left-0 top-0 z-10 h-full w-full overflow-auto bg-zinc-950 bg-opacity-95"
@@ -43,7 +42,7 @@ const ProjectModal = (props) => {
           <h2 className="my-1 mb-2 text-center text-2xl font-bold underline sm:text-3xl">
             {props.project.name}
           </h2>
-          <div className="mx-4 mb-2 flex justify-around pt-4 sm:pt-1 sm:justify-evenly">
+          <div className="mx-4 mb-2 flex justify-around pt-4 sm:justify-evenly sm:pt-1">
             {projectLinks.map((links, index) => {
               return (
                 <IconLinks
@@ -69,19 +68,29 @@ const ProjectModal = (props) => {
           <div className="mx-2 pt-3">
             <p className="px-2">{props.project.details}</p>
           </div>
-          <div className="mx-4 my-2 flex flex-wrap justify-around rounded-xl bg-zinc-600 py-1 sm:my-4 sm:py-3">
+          <div className="mx-4 my-2 flex rounded bg-zinc-600 py-1 sm:my-4 sm:flex-wrap justify-around sm:rounded-xl sm:py-3">
             {props.project.techStack.map((tech, index) => {
-              return (
-                <Image
-                  width={32}
-                  height={32}
-                  src={tech.icon}
-                  alt={`${tech.name} Icon`}
-                  title={tech.name}
-                  key={index}
-                  className="max-[380px]:h-6"
-                />
-              );
+              if (tech.name !== "HTML" && tech.name !== "CSS") {
+                return (
+                  <div className="flex flex-col items-center">
+                    <Image
+                      width={32}
+                      height={32}
+                      src={tech.icon}
+                      alt={`${tech.name} Icon`}
+                      // title={tech.name}
+                      key={index}
+                      className="max-[380px]:h-6"
+                    />
+                    <label
+                      htmlFor="skillIcon"
+                      className="hidden sm:block md:text-sm"
+                    >
+                      {tech.name}
+                    </label>
+                  </div>
+                );
+              }
             })}
           </div>
         </div>
