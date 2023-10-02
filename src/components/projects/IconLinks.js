@@ -9,7 +9,7 @@ const IconLinks = ({ url, icon, label }) => {
         title={label}
         className="flex flex-col-reverse"
       >
-        <FontAwesomeIcon icon={icon} className="peer py-1 md:text-xl" />
+        <FontAwesomeIcon icon={icon} id="icon" className="peer py-1 md:text-xl" />
         <label for="icon" className="text-xs sm:opacity-0 sm:peer-hover:opacity-100 sm:transition-opacity">
           {label}
         </label>

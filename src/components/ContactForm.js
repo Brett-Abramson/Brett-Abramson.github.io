@@ -97,7 +97,7 @@ const ContactForm = () => {
                     onChange={handleChange}
                   />
 
-                  <label htmlFor="Email">Email:</label>
+                  <label htmlFor="email">Email:</label>
                   <input
                     type="text"
                     id="email"
