@@ -69,7 +69,7 @@ const ProjectModal = (props) => {
             <VideoCarousel project={props.project} />
           ) : (
             <div className="mx-4 rounded-sm border border-zinc-100">
-              <video loop autoPlay>
+              <video loop autoPlay poster={props.project.image}>
                 <source src={props.project.gif} type="video/mp4" />
               </video>
             </div>
