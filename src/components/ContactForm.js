@@ -92,6 +92,7 @@ const ContactForm = () => {
                     id="name"
                     name="name"
                     value={formData.name}
+                    placeholder=" Your Name Here"
                     required
                     autoComplete="name"
                     className="rounded text-zinc-950"
@@ -104,6 +105,7 @@ const ContactForm = () => {
                     id="email"
                     name="email"
                     value={formData.email}
+                    placeholder=" yourEmail@email.com"
                     required
                     autoComplete="email"
                     className="rounded text-zinc-950"
@@ -115,6 +117,7 @@ const ContactForm = () => {
                     id="message"
                     name="message"
                     value={formData.message}
+                    placeholder=" Compose your message"
                     required
                     className="rounded text-zinc-950"
                     onChange={handleChange}
