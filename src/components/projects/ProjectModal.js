@@ -3,8 +3,13 @@ import VideoCarousel from "./VideoCarousel";
 import IconLinks from "./IconLinks";
 import { faGithub, faLink, faTimes } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState, useRef } from "react";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 const ProjectModal = (props) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef(null);
+
   const handleModalClick = (event) => {
     if (event.target === event.currentTarget) {
       props.toggleModal(null);
@@ -68,10 +73,37 @@ const ProjectModal = (props) => {
           {Array.isArray(props.project.gif) ? (
             <VideoCarousel project={props.project} />
           ) : (
-            <div className="mx-4 rounded-sm border border-zinc-100">
-              <video loop autoPlay poster={props.project.image}>
+            <div className="relative mx-4 rounded-sm border border-zinc-100">
+              <video
+                loop
+                // onClick={() => {
+                //   if (videoRef.current.paused) {
+                //     videoRef.current.play();
+                //     setIsPlaying(true);
+                //   } else {
+                //     videoRef.current.pause();
+                //     setIsPlaying(false);
+                //   }
+                // }}
+                autoPlay
+                // poster={props.project.image}
+              >
                 <source src={props.project.gif} type="video/mp4" />
               </video>
+{/* 
+              {!isPlaying && (
+                <div
+                  className="absolute inset-0 flex items-center justify-center"
+                  onClick={() => {
+                    if (videoRef.current) {
+                      videoRef.current.play();
+                      setIsPlaying(true);
+                    }
+                  }}
+                >
+                  <FontAwesomeIcon icon={faPlay} size="3x" />
+                </div>
+              )} */}
             </div>
           )}
 

@@ -1,14 +1,14 @@
 import Image from "next/image";
 import VinylVaultImage from "../../../public/static/images/VinylVault.png";
-import VinylVaultGIF from "../../../public/static/videos/VinylVaultGIF.mp4";
+import VinylVaultVideo from "../../../public/static/videos/VinylVaultVideo.mp4";
 import LANBuddyImage from "../../../public/static/images/LANBuddy.png";
-import LANBuddyGIF from "../../../public/static/videos/LANBuddyGIF.mp4";
+import LANBuddyVideo from "../../../public/static/videos/LANBuddyVideo.mp4";
 import LostInTheWoodsImage from "../../../public/static/images/LostInTheWoods.png";
-import LostInTheWoodsGIF from "../../../public/static/videos/LostInTheWoodsGIF.mp4";
+import LostInTheWoodsVideo from "../../../public/static/videos/LostInTheWoodsVideo.mp4";
 import MMTCUserImage from "../../../public/static/images/TOPReporting.png";
 import MMTCPartnersImage from "../../../public/static/images/TOPPartners.png";
-import MMTCUserGIF from "../../../public/static/videos/MMTCUserGIF.mp4";
-import MMTCPartnerGIF from "../../../public/static/videos/MMTCPartnerGIF.mp4";
+import MMTCUserVideo from "../../../public/static/videos/MMTCUserVideo.mp4";
+import MMTCPartnerVideo from "../../../public/static/videos/MMTCPartnerVideo.mp4";
 import AmazonS3 from "../../../public/static/icons/AmazonS3.svg";
 import AmazonRDS from "../../../public/static/icons/AmazonRDS.svg";
 import Knex from "../../../public/static/icons/Knex.svg";
@@ -37,11 +37,11 @@ const Projects = () => {
       gif: [
         {
           name: "User",
-          video: MMTCUserGIF,
+          video: MMTCUserVideo,
         },
         {
           name: "Partner",
-          video: MMTCPartnerGIF,
+          video: MMTCPartnerVideo,
         },
       ],
       techStack: [
@@ -96,7 +96,7 @@ const Projects = () => {
       gitHubFrontend: "https://github.com/Brett-Abramson/Vinyl-Vault-Frontend",
       gitHubBackend: "https://github.com/Brett-Abramson/Vinyl_Vault_Backend",
       image: VinylVaultImage,
-      gif: VinylVaultGIF,
+      gif: VinylVaultVideo,
       techStack: [
         {
           name: "Next.js",
@@ -141,7 +141,7 @@ const Projects = () => {
       gitHubFrontend: "https://github.com/Brett-Abramson/LANbuddy_frontend",
       gitHubBackend: "https://github.com/jdbohac/project_4_backend",
       image: LANBuddyImage,
-      gif: LANBuddyGIF,
+      gif: LANBuddyVideo,
       techStack: [
         {
           name: "React",
@@ -184,7 +184,7 @@ const Projects = () => {
       gitHubFrontend: "https://github.com/Brett-Abramson/project_3_frontend",
       gitHubBackend: "https://github.com/Brett-Abramson/project_3_backend",
       image: LostInTheWoodsImage,
-      gif: LostInTheWoodsGIF,
+      gif: LostInTheWoodsVideo,
       techStack: [
         {
           name: "React",
