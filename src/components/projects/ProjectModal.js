@@ -76,20 +76,21 @@ const ProjectModal = (props) => {
             <div className="relative mx-4 rounded-sm border border-zinc-100">
               <video
                 loop
-                onClick={() => {
-                  if (videoRef.current.paused) {
-                    videoRef.current.play();
-                    setIsPlaying(true);
-                  } else {
-                    videoRef.current.pause();
-                    setIsPlaying(false);
-                  }
-                }}
-                poster={props.project.image}
+                // onClick={() => {
+                //   if (videoRef.current.paused) {
+                //     videoRef.current.play();
+                //     setIsPlaying(true);
+                //   } else {
+                //     videoRef.current.pause();
+                //     setIsPlaying(false);
+                //   }
+                // }}
+                autoPlay
+                // poster={props.project.image}
               >
                 <source src={props.project.gif} type="video/mp4" />
               </video>
-
+{/* 
               {!isPlaying && (
                 <div
                   className="absolute inset-0 flex items-center justify-center"
@@ -102,7 +103,7 @@ const ProjectModal = (props) => {
                 >
                   <FontAwesomeIcon icon={faPlay} size="3x" />
                 </div>
-              )}
+              )} */}
             </div>
           )}
 
