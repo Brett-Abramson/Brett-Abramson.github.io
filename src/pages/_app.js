@@ -8,7 +8,8 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Brett Abramson</title>
+        <title>Brett Abramson - Software Developer Portfolio</title>
+        <meta name="description" content="Discover Brett Abramson's impressive software development portfolio, showcasing his projects and teechnologies he has worked with. Learn more about his skills, connect, and find ways to explore his other profiles." />
       </Head>
       <Layout>
         <Component {...pageProps} />
