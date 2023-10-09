@@ -110,9 +110,9 @@ const Skills = () => {
         {technologies.map((technology, index) => {
           return (
             <div key={"Skills" + index}>
-              <Link href={technology.url} target="_blank" rel="noreferrer">
+              <Link href={technology.url} target="_blank" rel="noreferrer" aria-label={`Visit ${technology.name}'s webpage`}>
                 <div
-                  className="flex flex-col items-center justify-center rounded-lg bg-slate-100 hover:scale-105 p-4 text-slate-950 shadow-md xl:py-7"
+                  className="flex flex-col items-center justify-center rounded-lg bg-slate-100 p-4 text-slate-950 shadow-md hover:scale-105 xl:py-7"
                   title={technology.name}
                 >
                   <Image

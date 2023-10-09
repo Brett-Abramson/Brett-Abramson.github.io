@@ -22,6 +22,7 @@ const Footer = () => {
               <Link
                 href="https://www.linkedin.com/in/brettmabramson/"
                 target="_blank"
+                aria-label="Visit Brett's linkedIn"
               >
                 <FontAwesomeIcon
                   icon={faLinkedin}
@@ -30,7 +31,11 @@ const Footer = () => {
               </Link>
             </li>
             <li className="my-3 md:mx-0">
-              <Link href="https://github.com/Brett-Abramson" target="_blank">
+              <Link
+                href="https://github.com/Brett-Abramson"
+                target="_blank"
+                aria-label="Visit Brett's github"
+              >
                 <FontAwesomeIcon
                   icon={faGithub}
                   className="hover:scale-110 hover:text-white"
@@ -56,9 +61,4 @@ const Footer = () => {
 
 export default Footer;
 
-// Contact Info
-// Social Media Links
-// Nav Links
-// Copyright
-// Back to Top Button
-// Logo or Branding
+

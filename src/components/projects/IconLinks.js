@@ -8,7 +8,7 @@ const IconLinks = ({ url, icon, label }) => {
         target={"_blank"}
         title={label}
         className="flex flex-col-reverse"
-        aria-label={`${label} icon`}
+        aria-label={`Visit the ${label}`}
       >
         <FontAwesomeIcon icon={icon} id={`${label} icon`} className="peer py-1 md:text-xl" />
         <span className="text-xs sm:opacity-0 sm:peer-hover:opacity-100 sm:transition-opacity">
