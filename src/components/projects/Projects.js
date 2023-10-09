@@ -206,19 +206,6 @@ const Projects = () => {
                       toggleModal(project);
                     }}
                   >
-                    {/* {
-                      !Array.isArray(project.image) ? (
-                        <Image
-                          src={project.image}
-                          alt={`Image of ${project.name}'s Website`}
-                          fill
-                          sizes="75vw"
-                          className="!static object-contain"
-                        />
-                      ) : (
-                        <ImageCarousel media={project} />
-                      ) // function that moves through image carousel goes here
-                    } */}
                     <Image
                       src={project.image}
                       alt={`Image of ${project.name}'s Website`}
