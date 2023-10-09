@@ -177,45 +177,6 @@ const Projects = () => {
         },
       ],
     },
-    {
-      name: "Lost in the Woods",
-      description: "A Community Sourced Hiking and Camping Companion App",
-      hostedLink: "https://lost-in-the-woods.herokuapp.com/",
-      gitHubFrontend: "https://github.com/Brett-Abramson/project_3_frontend",
-      gitHubBackend: "https://github.com/Brett-Abramson/project_3_backend",
-      image: LostInTheWoodsImage,
-      gif: LostInTheWoodsVideo,
-      techStack: [
-        {
-          name: "React",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-        },
-        {
-          name: "Mongoose",
-          icon: "",
-        },
-        {
-          name: "MongoDB",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg",
-        },
-        {
-          name: "Express",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-        },
-        {
-          name: "Javascript",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-        },
-        {
-          name: "HTML",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-        },
-        {
-          name: "CSS",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-        },
-      ],
-    },
   ];
 
   return (

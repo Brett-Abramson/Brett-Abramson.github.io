@@ -1,10 +1,10 @@
 import Image from "next/image";
 import VideoCarousel from "./VideoCarousel";
 import IconLinks from "./IconLinks";
-import { faGithub, faLink, faTimes } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faTimes } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useRef } from "react";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faLink } from "@fortawesome/free-solid-svg-icons";
 
 const ProjectModal = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);
