@@ -107,9 +107,9 @@ const Skills = () => {
         Skills
       </h2>
       <div className="mx-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mx-12 md:grid-cols-4 md:gap-5 lg:mx-16 lg:grid-cols-5 lg:gap-6 xl:gap-8">
-        {technologies.map((technology, index) => {
+        {technologies.map((technology) => {
           return (
-            <div key={"Skills" + index}>
+            <div key={technology.name}>
               <Link href={technology.url} target="_blank" rel="noreferrer" aria-label={`Visit ${technology.name}'s webpage`}>
                 <div
                   className="flex flex-col items-center justify-center rounded-lg bg-slate-100 p-4 text-slate-950 shadow-md hover:scale-105 xl:py-7"

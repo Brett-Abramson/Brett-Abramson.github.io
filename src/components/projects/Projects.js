@@ -194,7 +194,7 @@ const Projects = () => {
           {projects.map((project, index) => {
             return (
               <div
-                key={index}
+                key={project.name}
                 className="my-8 h-full shadow-slate-400 md:shadow-md"
               >
                 <div className="m-auto flex w-full flex-col rounded-sm border-x border-y sm:border-solid sm:border-zinc-800 md:max-w-xl md:flex-row md:hover:scale-105 md:hover:cursor-pointer md:hover:transition md:hover:ease-in-out lg:max-w-4xl lg:border-none lg:hover:scale-100 lg:hover:cursor-default xl:max-w-6xl">
