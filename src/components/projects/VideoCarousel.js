@@ -28,7 +28,7 @@ const VideoCarousel = (props) => {
         })}
       </div>
       <div className="mx-4 rounded-sm border border-zinc-100">
-        <video key={index} loop autoPlay poster={props.project.image}>
+        <video key={index} loop autoPlay>
           <source src={videos[index].video} type="video/mp4" />
         </video>
       </div>
