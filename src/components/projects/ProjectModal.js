@@ -58,10 +58,10 @@ const ProjectModal = (props) => {
             {props.project.name}
           </h2>
           <div className="mx-auto mb-3 flex justify-around pt-4 sm:justify-evenly sm:pt-1">
-            {projectLinks.map((links, index) => {
+            {projectLinks.map((links) => {
               return (
                 <IconLinks
-                  key={`Link: ${index}`}
+                  key={links.label}
                   label={links.label}
                   url={links.url}
                   icon={links.icon}
@@ -113,11 +113,11 @@ const ProjectModal = (props) => {
             </p>
           </div>
           <div className="mx-4 my-2 flex  justify-evenly rounded bg-zinc-600 py-1.5 sm:my-4 sm:rounded-xl sm:py-3 lg:flex-wrap">
-            {props.project.techStack.map((tech, index) => {
+            {props.project.techStack.map((tech) => {
               if (tech.name !== "HTML" && tech.name !== "CSS") {
                 return (
                   <div
-                    key={`icon: ${index}`}
+                    key={tech.name}
                     className="relative flex flex-col items-center justify-center"
                   >
                     <Image
