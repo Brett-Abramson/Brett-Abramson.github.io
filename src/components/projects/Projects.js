@@ -1,4 +1,4 @@
-import { projectData } from "./ProjectData";
+import { projectData } from "./projectData";
 import SingleProject from "./SingleProject";
 
 
