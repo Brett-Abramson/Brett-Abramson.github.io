@@ -1,15 +1,10 @@
 import Image from "next/image";
 import VideoCarousel from "./VideoCarousel";
 import IconLinks from "./IconLinks";
-import { faGithub, faTimes } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState, useRef } from "react";
-import { faPlay, faLink } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 const ProjectModal = (props) => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = useRef(null);
-
   const handleModalClick = (event) => {
     if (event.target === event.currentTarget) {
       props.toggleModal(null);
@@ -58,10 +53,10 @@ const ProjectModal = (props) => {
             {props.project.name}
           </h2>
           <div className="mx-auto mb-3 flex justify-around pt-4 sm:justify-evenly sm:pt-1">
-            {projectLinks.map((links, index) => {
+            {projectLinks.map((links) => {
               return (
                 <IconLinks
-                  key={`Link: ${index}`}
+                  key={links.label}
                   label={links.label}
                   url={links.url}
                   icon={links.icon}
@@ -69,41 +64,17 @@ const ProjectModal = (props) => {
               );
             })}
           </div>
-          {/* multiple videos: displays tabs */}
+          {/* MULTIPLE VIDOES: displays tabs */}
           {Array.isArray(props.project.gif) ? (
             <VideoCarousel project={props.project} />
           ) : (
             <div className="relative mx-4 rounded-sm border border-zinc-100">
               <video
                 loop
-                // onClick={() => {
-                //   if (videoRef.current.paused) {
-                //     videoRef.current.play();
-                //     setIsPlaying(true);
-                //   } else {
-                //     videoRef.current.pause();
-                //     setIsPlaying(false);
-                //   }
-                // }}
                 autoPlay
-                // poster={props.project.image}
               >
                 <source src={props.project.gif} type="video/mp4" />
               </video>
-{/* 
-              {!isPlaying && (
-                <div
-                  className="absolute inset-0 flex items-center justify-center"
-                  onClick={() => {
-                    if (videoRef.current) {
-                      videoRef.current.play();
-                      setIsPlaying(true);
-                    }
-                  }}
-                >
-                  <FontAwesomeIcon icon={faPlay} size="3x" />
-                </div>
-              )} */}
             </div>
           )}
 
@@ -113,11 +84,11 @@ const ProjectModal = (props) => {
             </p>
           </div>
           <div className="mx-4 my-2 flex  justify-evenly rounded bg-zinc-600 py-1.5 sm:my-4 sm:rounded-xl sm:py-3 lg:flex-wrap">
-            {props.project.techStack.map((tech, index) => {
+            {props.project.techStack.map((tech) => {
               if (tech.name !== "HTML" && tech.name !== "CSS") {
                 return (
                   <div
-                    key={`icon: ${index}`}
+                    key={tech.name}
                     className="relative flex flex-col items-center justify-center"
                   >
                     <Image
