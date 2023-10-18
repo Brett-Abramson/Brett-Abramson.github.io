@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ProjectModal from "./ProjectModal";
 import useWindowSize from "./useWindowSize";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const SingleProject = ({ project, index }) => {
   const [openModal, setOpenModal] = useState(false);
@@ -13,10 +13,24 @@ const SingleProject = ({ project, index }) => {
 
   const handleModalClick = () => {
     if (width && width <= 1024) {
-      console.log("clicked!");
+      // console.log("clicked!");
       toggleModal(project);
     }
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape" && openModal) {
+        toggleModal();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [openModal, toggleModal]);
 
   return (
     <>
@@ -30,7 +44,7 @@ const SingleProject = ({ project, index }) => {
               index % 2 === 0 ? "sm:order-3" : ""
             } sm:border-r sm:border-zinc-800 lg:border lg:border-zinc-800 lg:drop-shadow-lg`}
             onClick={() => {
-              toggleModal(project);
+              toggleModal();
             }}
           >
             <Image
@@ -51,9 +65,9 @@ const SingleProject = ({ project, index }) => {
               index % 2 === 0
                 ? "bg-gradient-to-tl sm:order-1"
                 : "bg-gradient-to-tr"
-            }  from-slate-400 via-zinc-400 to-stone-500 py-3 sm:justify-evenly md:w-1/3 lg:border  lg:border-zinc-800 lg:shadow-lg lg:transition lg:ease-out lg:hover:scale-105 lg:hover:cursor-pointer lg:hover:transition lg:hover:ease-in xl:px-5`}
+            }  from-slate-400 via-zinc-400 to-stone-500 py-3 sm:justify-evenly md:w-1/3 lg:border  lg:border-zinc-800  xl:px-5`}
             onClick={() => {
-              handleModalClick;
+              handleModalClick();
             }}
           >
             <h3 className="text-center text-xl font-bold lg:text-2xl">

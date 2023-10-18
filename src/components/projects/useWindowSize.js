@@ -25,7 +25,7 @@ const useWindowSize = () => {
     }
   }, []);
 
-  return windowSize
+  return windowSize;
 };
 
-export default useWindowSize
+export default useWindowSize;
