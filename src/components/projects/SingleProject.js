@@ -1,11 +1,21 @@
 import Image from "next/image";
 import ProjectModal from "./ProjectModal";
+import useWindowSize from "./useWindowSize";
 import { useState } from "react";
 
 const SingleProject = ({ project, index }) => {
   const [openModal, setOpenModal] = useState(false);
+  const { width } = useWindowSize();
+
   const toggleModal = () => {
     setOpenModal(!openModal);
+  };
+
+  const handleModalClick = () => {
+    if (width && width <= 1024) {
+      console.log("clicked!");
+      toggleModal(project);
+    }
   };
 
   return (
@@ -43,7 +53,7 @@ const SingleProject = ({ project, index }) => {
                 : "bg-gradient-to-tr"
             }  from-slate-400 via-zinc-400 to-stone-500 py-3 sm:justify-evenly md:w-1/3 lg:border  lg:border-zinc-800 lg:shadow-lg lg:transition lg:ease-out lg:hover:scale-105 lg:hover:cursor-pointer lg:hover:transition lg:hover:ease-in xl:px-5`}
             onClick={() => {
-              toggleModal(project);
+              handleModalClick;
             }}
           >
             <h3 className="text-center text-xl font-bold lg:text-2xl">
