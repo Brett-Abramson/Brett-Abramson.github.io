@@ -38,11 +38,11 @@ const SingleProject = ({ project, index }) => {
         key={project.name}
         className="my-8 h-full shadow-slate-400 md:shadow-md"
       >
-        <div className="m-auto flex w-full flex-col rounded-sm border-x border-y sm:border-solid sm:border-zinc-800 md:max-w-xl md:flex-row md:hover:scale-105 md:hover:cursor-pointer md:hover:transition md:hover:ease-in-out lg:max-w-4xl lg:border-none lg:hover:scale-100 lg:hover:cursor-default xl:max-w-6xl">
+        <div className="m-auto flex w-full flex-col rounded-sm border-x border-y shadow-md shadow-slate-400 sm:border-solid sm:border-zinc-800 md:max-w-xl md:flex-row md:hover:scale-105 md:hover:cursor-pointer md:hover:transition md:hover:ease-in-out lg:max-w-4xl lg:border-none lg:shadow-none lg:hover:scale-100 lg:hover:cursor-default xl:max-w-6xl">
           <div
             className={`relative h-full opacity-90 lg:transition lg:ease-out lg:hover:scale-105 lg:hover:cursor-pointer lg:hover:opacity-100 lg:hover:transition lg:hover:ease-in ${
               index % 2 === 0 ? "sm:order-3" : ""
-            } sm:border-r sm:border-zinc-800 lg:border lg:border-zinc-800 lg:drop-shadow-lg`}
+            } sm:border-r sm:border-zinc-800  lg:hover:shadow-lg lg:hover:shadow-slate-500`}
             onClick={() => {
               toggleModal();
             }}
