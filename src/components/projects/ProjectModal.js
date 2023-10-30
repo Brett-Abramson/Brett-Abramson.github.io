@@ -72,6 +72,7 @@ const ProjectModal = (props) => {
               <video
                 loop
                 autoPlay
+                controls
               >
                 <source src={props.project.gif} type="video/mp4" />
               </video>

@@ -70,7 +70,7 @@ export const projectData = [
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
       },
     ],
-    details: "Collaborated with a team of 15+ Software Engineers, UX/UI Designers, UX Researchers, Data Scientists, and Data Analysts on The Opportunity Project, led by the US Census Bureau, the US Department of Commerce, and the FDA. \nUsed federal data to build an application focused on innovations from the COVID-19 pandemic, empowering consumers (patients) through knowledge of privacy and security regarding their health data.",
+    details: `Collaborating with a multi-disciplinary team of 12, Make My Test Count is designed to enhance patient reporting and heathcare provider interactions. It features: a user portal that simplifies COVID test result submissions and provides easy access to regional COVID data, a provider white-label portal that enables healthcare providers to create customized user portals, facilitating a tailored user experience aligned with specific needs and preferences.` 
   },
   {
     name: "Vinyl Vault",
