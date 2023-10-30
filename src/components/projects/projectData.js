@@ -70,7 +70,7 @@ export const projectData = [
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
       },
     ],
-    details: "",
+    details: "Collaborated with a team of 15+ Software Engineers, UX/UI Designers, UX Researchers, Data Scientists, and Data Analysts on The Opportunity Project, led by the US Census Bureau, the US Department of Commerce, and the FDA. \nUsed federal data to build an application focused on innovations from the COVID-19 pandemic, empowering consumers (patients) through knowledge of privacy and security regarding their health data.",
   },
   {
     name: "Vinyl Vault",
