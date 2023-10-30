@@ -70,7 +70,7 @@ export const projectData = [
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
       },
     ],
-    details: "",
+    details: `Collaborating with a multi-disciplinary team of 12, Make My Test Count is designed to enhance patient reporting and heathcare provider interactions. It features: a user portal that simplifies COVID test result submissions and provides easy access to regional COVID data, a provider white-label portal that enables healthcare providers to create customized user portals, facilitating a tailored user experience aligned with specific needs and preferences.` 
   },
   {
     name: "Vinyl Vault",
