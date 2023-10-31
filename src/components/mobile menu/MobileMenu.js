@@ -1,6 +1,6 @@
 import MobileMenuButton from "./MobileMenuButton";
 import { useState } from "react";
-import SocialLinks from "./SocialLinks";
+import SocialLinks from "../SocialLinks";
 
 const MobileMenu = (props) => {
   const [showMobile, setShowMobile] = useState(false);

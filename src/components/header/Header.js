@@ -1,4 +1,4 @@
-import MobileMenu from "./MobileMenu";
+import MobileMenu from "../mobile menu/MobileMenu";
 
 const Header = (props) => {
   return (
