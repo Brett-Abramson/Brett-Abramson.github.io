@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "../Button";
+import { InputField } from "../shared/InputField";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -92,32 +93,22 @@ const ContactForm = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col">
-                  <label htmlFor="name">Name:</label>
-                  <input
-                    type="text"
+                  <InputField
                     id="name"
-                    name="name"
+                    label="Name:"
                     value={formData.name}
-                    placeholder=" Your Name Here"
-                    required
+                    placeholder="Your Name"
                     autoComplete="name"
-                    className="rounded text-zinc-950"
-                    onChange={handleChange}
+                    handleChange={handleChange}
                   />
-
-                  <label htmlFor="email">Email:</label>
-                  <input
-                    type="text"
+                  <InputField
                     id="email"
-                    name="email"
+                    label="Email:"
                     value={formData.email}
-                    placeholder=" yourEmail@email.com"
-                    required
+                    placeholder="Yourname@yourEmail.com"
                     autoComplete="email"
-                    className="rounded text-zinc-950"
-                    onChange={handleChange}
+                    handleChange={handleChange}
                   />
-
                   <label htmlFor="message">Message:</label>
                   <textarea
                     id="message"
