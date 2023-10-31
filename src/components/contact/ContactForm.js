@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "./Button";
+import Button from "../Button";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -8,7 +8,7 @@ const ContactForm = () => {
     message: "",
   });
   const [isEmailSent, setIsEmailSent] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
   const handleSubmit = async (event) => {

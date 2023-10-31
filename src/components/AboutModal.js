@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Button from "./Button";
-import ContactForm from "./ContactForm";
+import ContactForm from "./contact/ContactForm";
 
 const AboutModal = (props) => {
   const handleModalClick = (event) => {
