@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Button from "./Button";
+import Button from "./shared/Button";
 import ContactForm from "./contact/ContactForm";
 
 const AboutModal = (props) => {
@@ -23,7 +23,7 @@ const AboutModal = (props) => {
           <div className="mx-5">
             <h2 className="mt-8 text-2xl">About Me</h2>
             <div className="mb-4 w-2/3 bg-indigo-700 py-1 sm:w-1/2" />
-            <ul className="my-4 mx-4 flex justify-between sm:justify-around lg:my-8">
+            <ul className="mx-4 my-4 flex justify-between sm:justify-around lg:my-8">
               <li className="hover:scale-105 hover:text-white hover:underline">
                 <Link
                   href="https://www.linkedin.com/in/brettmabramson/"
@@ -102,6 +102,10 @@ const AboutModal = (props) => {
               <h4 className="my-4 mr-8 animate-pulse text-right md:mr-12 md:text-lg lg:mr-16">
                 Connect!
               </h4>
+              <p className="mb-1  text-center sm:ml-10 sm:text-left sm:mb-3 lg:mb-6">
+                Want to reach out? <br />
+                You can send me an e-mail using the form below.
+              </p>
               <ContactForm />
             </div>
           </div>

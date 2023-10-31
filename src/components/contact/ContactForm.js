@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "../Button";
+import Button from "../shared/Button";
 import { InputField } from "../shared/InputField";
 import { TextAreaField } from "../shared/TextAreaField";
 
@@ -58,7 +58,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="mb-4 rounded-xl border border-slate-500 p-2 lg:m-auto lg:w-2/3 lg:px-4">
+    <div className="mb-4 rounded-xl border border-slate-500 bg-zinc-900 p-2 lg:m-auto lg:w-4/5 lg:px-4">
       {isEmailSent ? (
         <div className="flex flex-col items-center">
           <p>Email successfully Sent!</p>
@@ -93,7 +93,10 @@ const ContactForm = () => {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col">
+                <form
+                  onSubmit={handleSubmit}
+                  className="m-auto flex w-4/5 flex-col gap-1 pt-2 lg:pt-4"
+                >
                   <InputField
                     id="name"
                     label="Name:"
