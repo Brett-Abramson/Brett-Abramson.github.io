@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "../Button";
 import { InputField } from "../shared/InputField";
+import { TextAreaField } from "../shared/TextAreaField";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -110,13 +111,11 @@ const ContactForm = () => {
                     handleChange={handleChange}
                   />
                   <label htmlFor="message">Message:</label>
-                  <textarea
+                  <TextAreaField
                     id="message"
                     name="message"
                     value={formData.message}
                     placeholder=" Compose your message"
-                    required
-                    className="rounded text-zinc-950"
                     onChange={handleChange}
                   />
                   <Button
