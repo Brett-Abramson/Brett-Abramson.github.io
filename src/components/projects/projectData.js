@@ -34,6 +34,10 @@ export const projectData = [
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       },
       {
+        name: "Express",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+      },
+      {
         name: "PostGreSQL",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
       },
