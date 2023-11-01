@@ -15,7 +15,7 @@ const Projects = () => {
             Latest Works
           </h2>
         </div>
-        <div className="mx-5 mb-8 rounded-xl bg-slate-900 px-2 md:border-x">
+        <div className="mx-5 mb-8 rounded-xl bg-slate-900 px-2 md:border-x gap-4">
           {projectData.map((project, index) => 
             <SingleProject key={project.name} project={project} index={index}  />
           )}
