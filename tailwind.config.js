@@ -332,6 +332,8 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
+      lato: ["Lato", "sans-serif"],
+      merriweather: ["Merriweather", "serif"],
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
