@@ -52,7 +52,7 @@ const ProjectModal = (props) => {
           <h2 className="my-1 mb-2 text-center text-2xl font-bold underline sm:text-3xl">
             {props.project.name}
           </h2>
-          <div className="mx-5 mb-3 flex justify-between pt-4 sm:mx-20 sm:justify-evenly sm:pt-1">
+          <div className="mx-5 mb-3 flex justify-between font-lato pt-4 sm:mx-20 sm:justify-evenly sm:pt-1">
             {projectLinks.map((links) => {
               return (
                 <IconLinks
@@ -80,7 +80,7 @@ const ProjectModal = (props) => {
           )}
 
           <div className="mx-2 pt-3">
-            <p className="px-2 text-xs sm:text-base lg:text-lg">
+            <p className="px-2 text-xs leading-relaxed  md:leading-loose font-merriweather my-2 sm:text-base lg:text-lg">
               {props.project.details}
             </p>
           </div>
