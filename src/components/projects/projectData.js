@@ -164,5 +164,6 @@ export const projectData = [
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
       },
     ],
+    details: "At its core, LANBuddy hosts a comprehensive game database and acts as a social hub. A place where gamers can explore, contribute, and add themselves to games they are keen on. Under the hood, LANBuddy is powered by a robust back-end built with Django and PostgreSQL. This dynamic duo ensures seamless data management and reliable performance, even as the database grows with an ever-expanding list of games and user profiles. The user-centric front end was developed with React and MaterialU, creating a fluid and interactive user interface. This fusion facilitates a responsive design, ensuring gamers can effortlessly explore, connect, and engage on LANBuddy, regardless of the device they use."
   },
 ];
