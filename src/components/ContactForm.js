@@ -32,7 +32,8 @@ const ContactForm = () => {
       setIsLoading(false);
       resetFormData();
     } else {
-      console.error("Error sending email");
+      const errorData = await response.json();
+      console.error("Error sending email", errorData.message);
       setIsLoading(false);
       setIsError(true);
     }
