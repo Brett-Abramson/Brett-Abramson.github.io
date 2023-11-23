@@ -118,7 +118,7 @@ const ContactForm = () => {
                     id="message"
                     name="message"
                     value={formData.message}
-                    placeholder=" Compose your message"
+                    placeholder="Compose your message"
                     onChange={handleChange}
                   />
                   <Button
