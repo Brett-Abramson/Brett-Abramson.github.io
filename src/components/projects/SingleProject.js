@@ -71,7 +71,7 @@ const SingleProject = ({ project, index }) => {
               handleModalClick();
             }}
           >
-            <h3 className="text-center font-lato text-xl font-bold lg:text-3xl ">
+            <h3 className="text-center font-lato text-2xl font-bold lg:text-4xl ">
               {project.name}
             </h3>
             <div className="m-auto mb-1 w-3/4 border-y bg-zinc-200 md:hidden" />
