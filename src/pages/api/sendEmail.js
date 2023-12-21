@@ -49,7 +49,7 @@ export default async (req, res) => {
   }
   try {
     if (req.method === "POST") {
-      await applyRateLimit(req, res);
+      // await applyRateLimit(req, res);
       const { name, email, message } = req.body;
       const websiteURL = "https://brett-abramson.vercel.app/";
       const messageWithFooter = `${message}\n\nThis message was sent from ${websiteURL}`;
@@ -84,7 +84,7 @@ export default async (req, res) => {
       });
     }
   } catch (exception) {
-    // console.log("Exception caught:", JSON.stringify(exception));
+    console.log("Exception caught:", JSON.stringify(exception));
     return res.status(500).json({ message: "internal server error." });
   }
 };
