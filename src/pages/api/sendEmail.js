@@ -24,15 +24,22 @@ const apiLimiter = rateLimit({
   max: 5, //limit each IP to 5 requests per window
   message: "Too many requests from this IP, please try again after 15 minutes",
 });
-const applyMiddleware = (middleware) => (req, res) =>
-  new Promise((resolve, reject) => {
-    middleware(req, res, (result) => {
-      if (result instanceof Error) {
-        return reject(result);
-      }
-      return resolve(result);
+const applyMiddleware = (middleware) => async (req, res) => {
+  try {
+    await new Promise((resolve, reject) => {
+      middleware(req, res, (result) => {
+        if (result instanceof Error) {
+          return reject(result);
+        } else {
+          resolve(result);
+        }
+      });
     });
-  });
+  } catch (error) {
+    throw error;
+  }
+};
+
 const applyRateLimit = applyMiddleware(apiLimiter);
 
 export default async (req, res) => {
@@ -49,7 +56,7 @@ export default async (req, res) => {
   }
   try {
     if (req.method === "POST") {
-      // await applyRateLimit(req, res);
+      await applyRateLimit(req, res);
       const { name, email, message } = req.body;
       const websiteURL = "https://brett-abramson.vercel.app/";
       const messageWithFooter = `${message}\n\nThis message was sent from ${websiteURL}`;
